@@ -163,6 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { nom: "Sciences de l'éducation", desc: "Théories d'apprentissage, psychologie cognitive et pédagogies actives.", prof: "Pr. Fouad L.", heures: "28h", icone: "fas fa-brain" },
         { nom: "RF1 – Architecture", desc: "Composants matériels, processeur, mémoire, systèmes binaires.", prof: "Pr. Nadia T.", heures: "35h", icone: "fas fa-microchip" },
         { nom: "RF2 – Algorithmique", desc: "Bases de la programmation, structures conditionnelles, boucles, fonctions.", prof: "Pr. Hicham E.", heures: "40h", icone: "fas fa-code" }
+        
     ];
 
     const modulesS2 = [
@@ -177,40 +178,49 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     // Génération des cartes
-    function generateModulesPro(containerId, modules) {
-        const container = document.getElementById(containerId);
-        if (!container) return;
-        
-        container.innerHTML = '';
-        modules.forEach(module => {
-            const card = document.createElement('div');
-            card.className = 'module-pro-card';
-            card.innerHTML = `
-                <div class="module-pro-icon"><i class="${module.icone}"></i></div>
-                <h3>${module.nom}</h3>
-                <p class="module-pro-desc">${module.desc}</p>
-                <div class="module-pro-footer">
-                    <button class="module-pro-plus" data-nom="${module.nom}" data-prof="${module.prof}" data-heures="${module.heures}" data-desc="${module.desc}" data-icone="${module.icone}">
-                        <i class="fas fa-plus"></i>
-                    </button>
+    // Fonction pour générer les cartes avec icône à côté du nom
+function generateModulesPro(containerId, modules) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    
+    container.innerHTML = '';
+    modules.forEach(module => {
+        const card = document.createElement('div');
+        card.className = 'module-pro-card';
+        card.innerHTML = `
+            <div class="module-info-left">
+                <div class="module-icon-small"><i class="${module.icone}"></i></div>
+                <div class="module-text">
+                    <h3>${module.nom}</h3>
+                    <p class="module-pro-desc">${module.desc.substring(0, 60)}${module.desc.length > 60 ? '...' : ''}</p>
                 </div>
-            `;
-            container.appendChild(card);
+            </div>
+            <button class="module-plus-btn" 
+                data-nom="${module.nom}" 
+                data-prof="${module.prof}" 
+                data-heures="${module.heures}" 
+                data-desc="${module.desc}"
+                data-icone="${module.icone}">
+                <i class="fas fa-plus"></i>
+            </button>
+        `;
+        container.appendChild(card);
+    });
+    
+    // Ajouter les événements aux boutons +
+    document.querySelectorAll('.module-plus-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openModalPro(
+                btn.getAttribute('data-nom'),
+                btn.getAttribute('data-prof'),
+                btn.getAttribute('data-heures'),
+                btn.getAttribute('data-desc'),
+                btn.getAttribute('data-icone')
+            );
         });
-        
-        document.querySelectorAll('.module-pro-plus').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                openModalPro(
-                    btn.getAttribute('data-nom'),
-                    btn.getAttribute('data-prof'),
-                    btn.getAttribute('data-heures'),
-                    btn.getAttribute('data-desc'),
-                    btn.getAttribute('data-icone')
-                );
-            });
-        });
-    }
+    });
+}
 
     function openModalPro(nom, prof, heures, desc, icone) {
         const modal = document.getElementById('moduleModalPro');

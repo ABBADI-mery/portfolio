@@ -786,69 +786,85 @@ input:checked + .slider:before {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Grille modules */
+/* GRILLE MODULES */
 .modules-grid-pro {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.8rem;
 }
 
-/* Carte module */
+/* CARTE MODULE AVEC ICÔNE À CÔTÉ DU NOM */
 .module-pro-card {
     background: white;
     border-radius: 20px;
-    padding: 1.5rem;
+    padding: 1.2rem 1.5rem;
     transition: all 0.3s ease;
     border: 1px solid #eef2ff;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 
 .module-pro-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 30px -15px rgba(139, 92, 246, 0.15);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px -12px rgba(139, 92, 246, 0.15);
     border-color: #c4b5fd;
 }
 
-.module-pro-icon {
-    width: 50px;
-    height: 50px;
+/* Partie gauche : icône + infos */
+.module-info-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 1;
+}
+
+.module-icon-small {
+    width: 42px;
+    height: 42px;
     background: linear-gradient(135deg, #f0eaff, #e9d5ff);
-    border-radius: 14px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1rem;
+    flex-shrink: 0;
+    transition: all 0.3s;
 }
 
-.module-pro-icon i {
-    font-size: 1.4rem;
+.module-icon-small i {
+    font-size: 1.2rem;
     color: #8b5cf6;
 }
 
-.module-pro-card h3 {
-    font-size: 1rem;
+.module-pro-card:hover .module-icon-small {
+    background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+}
+
+.module-pro-card:hover .module-icon-small i {
+    color: white;
+}
+
+.module-text h3 {
+    font-size: 0.95rem;
     font-weight: 700;
     color: #1e293b;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.2rem;
     line-height: 1.3;
 }
 
-.module-pro-desc {
-    font-size: 0.8rem;
+.module-text .module-pro-desc {
+    font-size: 0.7rem;
     color: #64748b;
-    line-height: 1.5;
-    margin-bottom: 1.2rem;
+    line-height: 1.4;
+    margin: 0;
 }
 
-.module-pro-footer {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.module-pro-plus {
-    width: 36px;
-    height: 36px;
+/* Partie droite : bouton + */
+.module-plus-btn {
+    width: 34px;
+    height: 34px;
     background: #f1f5f9;
     border: none;
     border-radius: 50%;
@@ -857,20 +873,65 @@ input:checked + .slider:before {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
-.module-pro-plus i {
-    font-size: 1rem;
+.module-plus-btn i {
+    font-size: 0.9rem;
     color: #8b5cf6;
     transition: all 0.3s;
 }
 
-.module-pro-plus:hover {
+.module-plus-btn:hover {
     background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+    transform: scale(1.05);
 }
 
-.module-pro-plus:hover i {
+.module-plus-btn:hover i {
     color: white;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+    .modules-grid-pro {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .modules-grid-pro {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Theme sombre */
+body.dark-mode .module-pro-card {
+    background: #13131b;
+    border-color: #2a2a3e;
+}
+
+body.dark-mode .module-text h3 {
+    color: #e0d6f0;
+}
+
+body.dark-mode .module-text .module-pro-desc {
+    color: #b0a8d0;
+}
+
+body.dark-mode .module-icon-small {
+    background: #1e1e2e;
+}
+
+body.dark-mode .module-icon-small i {
+    color: #b47cff;
+}
+
+body.dark-mode .module-plus-btn {
+    background: #1e1e2e;
+}
+
+body.dark-mode .module-plus-btn i {
+    color: #b47cff;
 }
 
 /* Activités */
