@@ -40,33 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========= GÉNÉRATION DES 10 SÉANCES MSP =========
-    const seancesContainer = document.querySelector('.seances-grid');
-    if (seancesContainer) {
-        const seances = [
-            { numero: 1, date: "03/03/2025", rapport: "Observation d'une classe de 2nde - Introduction à l'algorithme" },
-            { numero: 2, date: "06/03/2025", rapport: "Assistance à un cours sur la structure séquentielle" },
-            { numero: 3, date: "10/03/2025", rapport: "Animation d'une séance sur les variables en Python" },
-            { numero: 4, date: "13/03/2025", rapport: "Correction d'exercices et suivi individualisé" },
-            { numero: 5, date: "17/03/2025", rapport: "Préparation d'un quiz numérique via Moodle" },
-            { numero: 6, date: "20/03/2025", rapport: "Évaluation formative : condition if/else" },
-            { numero: 7, date: "24/03/2025", rapport: "Projet mini-site web (HTML/CSS) encadrement" },
-            { numero: 8, date: "27/03/2025", rapport: "Réunion pédagogique et analyse de copies" },
-            { numero: 9, date: "31/03/2025", rapport: "Activité débranchée sur la logique binaire" },
-            { numero: 10, date: "03/04/2025", rapport: "Bilan de stage et entretien avec le tuteur" }
-        ];
-        
-        seances.forEach(s => {
-            const card = document.createElement('div');
-            card.className = 'seance-card';
-            card.innerHTML = `<strong><i class="fas fa-chalkboard"></i> Séance ${s.numero}</strong><br>
-                              <small><i class="far fa-calendar-alt"></i> ${s.date}</small>
-                              <p style="margin-top:8px;">📄 ${s.rapport}</p>`;
-            seancesContainer.appendChild(card);
-        });
-    }
-
-    // ========= CARROUSEL AVEC MODAL =========
+    // ========= CARROUSEL ACTIVITÉS =========
     const track = document.querySelector('.carousel-track');
     const slides = document.querySelectorAll('.carousel-slide');
     const prevBtn = document.querySelector('.prev');
@@ -154,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ========= DONNÉES S1 AVEC ICÔNES =========
+    // ========= DONNÉES MODULES S1 =========
     const modulesS1 = [
         { nom: "Méthodologie de recherche", desc: "Introduction aux méthodes qualitatives et quantitatives, rédaction académique.", prof: "Pr. Laurent V.", heures: "30h", icone: "fas fa-search" },
         { nom: "Gestion 1", desc: "Principes de gestion administrative et financière en milieu éducatif.", prof: "Pr. Jamila R.", heures: "25h", icone: "fas fa-chart-line" },
@@ -163,9 +137,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { nom: "Sciences de l'éducation", desc: "Théories d'apprentissage, psychologie cognitive et pédagogies actives.", prof: "Pr. Fouad L.", heures: "28h", icone: "fas fa-brain" },
         { nom: "RF1 – Architecture", desc: "Composants matériels, processeur, mémoire, systèmes binaires.", prof: "Pr. Nadia T.", heures: "35h", icone: "fas fa-microchip" },
         { nom: "RF2 – Algorithmique", desc: "Bases de la programmation, structures conditionnelles, boucles, fonctions.", prof: "Pr. Hicham E.", heures: "40h", icone: "fas fa-code" }
-        
     ];
 
+    // ========= DONNÉES MODULES S2 =========
     const modulesS2 = [
         { nom: "Évaluation", desc: "Méthodes d'évaluation formative et certificative.", prof: "Pr. Samira K.", heures: "22h", icone: "fas fa-clipboard-list" },
         { nom: "Gestion 2", desc: "Gestion de projets et leadership éducatif.", prof: "Pr. Rachid F.", heures: "24h", icone: "fas fa-chart-pie" },
@@ -177,51 +151,50 @@ document.addEventListener('DOMContentLoaded', () => {
         { nom: "Déontologie du métier", desc: "Éthique enseignante, droits et devoirs.", prof: "Me Benali", heures: "15h", icone: "fas fa-gavel" }
     ];
 
-    // Génération des cartes
-    // Fonction pour générer les cartes avec icône à côté du nom
-function generateModulesPro(containerId, modules) {
-    const container = document.getElementById(containerId);
-    if (!container) return;
-    
-    container.innerHTML = '';
-    modules.forEach(module => {
-        const card = document.createElement('div');
-        card.className = 'module-pro-card';
-        card.innerHTML = `
-            <div class="module-info-left">
-                <div class="module-icon-small"><i class="${module.icone}"></i></div>
-                <div class="module-text">
-                    <h3>${module.nom}</h3>
-                    <p class="module-pro-desc">${module.desc.substring(0, 60)}${module.desc.length > 60 ? '...' : ''}</p>
+    // ========= GÉNÉRATION DES CARTES MODULES =========
+    function generateModulesPro(containerId, modules) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        
+        container.innerHTML = '';
+        modules.forEach(module => {
+            const card = document.createElement('div');
+            card.className = 'module-pro-card';
+            card.innerHTML = `
+                <div class="module-info-left">
+                    <div class="module-icon-small"><i class="${module.icone}"></i></div>
+                    <div class="module-text">
+                        <h3>${module.nom}</h3>
+                        <p class="module-pro-desc">${module.desc.substring(0, 60)}${module.desc.length > 60 ? '...' : ''}</p>
+                    </div>
                 </div>
-            </div>
-            <button class="module-plus-btn" 
-                data-nom="${module.nom}" 
-                data-prof="${module.prof}" 
-                data-heures="${module.heures}" 
-                data-desc="${module.desc}"
-                data-icone="${module.icone}">
-                <i class="fas fa-plus"></i>
-            </button>
-        `;
-        container.appendChild(card);
-    });
-    
-    // Ajouter les événements aux boutons +
-    document.querySelectorAll('.module-plus-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            openModalPro(
-                btn.getAttribute('data-nom'),
-                btn.getAttribute('data-prof'),
-                btn.getAttribute('data-heures'),
-                btn.getAttribute('data-desc'),
-                btn.getAttribute('data-icone')
-            );
+                <button class="module-plus-btn" 
+                    data-nom="${module.nom}" 
+                    data-prof="${module.prof}" 
+                    data-heures="${module.heures}" 
+                    data-desc="${module.desc}"
+                    data-icone="${module.icone}">
+                    <i class="fas fa-plus"></i>
+                </button>
+            `;
+            container.appendChild(card);
         });
-    });
-}
+        
+        document.querySelectorAll('.module-plus-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openModalPro(
+                    btn.getAttribute('data-nom'),
+                    btn.getAttribute('data-prof'),
+                    btn.getAttribute('data-heures'),
+                    btn.getAttribute('data-desc'),
+                    btn.getAttribute('data-icone')
+                );
+            });
+        });
+    }
 
+    // ========= OUVERTURE MODAL =========
     function openModalPro(nom, prof, heures, desc, icone) {
         const modal = document.getElementById('moduleModalPro');
         const modalIcon = document.getElementById('modalProIcon');
@@ -241,7 +214,7 @@ function generateModulesPro(containerId, modules) {
     generateModulesPro('modules-s1-grid', modulesS1);
     generateModulesPro('modules-s2-grid', modulesS2);
 
-    // Gestion des onglets
+    // ========= GESTION DES ONGLETS =========
     const tabBtns = document.querySelectorAll('.tab-pro-btn');
     const semestreContents = {
         s1: document.getElementById('semestre-s1'),
@@ -265,9 +238,67 @@ function generateModulesPro(containerId, modules) {
         });
     });
 
-    // Fermeture du modal
+    // ========= FERMETURE MODAL =========
     const modalPro = document.getElementById('moduleModalPro');
     const closeModalPro = document.querySelector('.modal-pro-close');
     if (closeModalPro) closeModalPro.addEventListener('click', () => modalPro.style.display = 'none');
     window.addEventListener('click', (e) => { if (e.target === modalPro) modalPro.style.display = 'none'; });
+
+    // ========= GÉNÉRATION DES SÉANCES MSP =========
+    const seancesMSP = [
+        { numero: 1, date: "03/03/2025", titre: "Introduction à l'algorithmique", desc: "Présentation des concepts de base : variables, types de données.", niveau: "TC Sciences" },
+        { numero: 2, date: "06/03/2025", titre: "Structures séquentielles", desc: "Les instructions d'entrée/sortie et les affectations.", niveau: "TC Sciences" },
+        { numero: 3, date: "10/03/2025", titre: "Les variables en Python", desc: "Déclaration, affectation et types de variables.", niveau: "TC Lettres" },
+        { numero: 4, date: "13/03/2025", titre: "Les conditions (if/else)", desc: "Introduction aux structures conditionnelles.", niveau: "TC Sciences" },
+        { numero: 5, date: "17/03/2025", titre: "Exercices pratiques", desc: "Résolution d'exercices sur les conditions.", niveau: "TC Lettres" },
+        { numero: 6, date: "20/03/2025", titre: "Les boucles (for/while)", desc: "Introduction aux itérations et répétitions.", niveau: "TC Sciences" },
+        { numero: 7, date: "24/03/2025", titre: "Projet mini-site web", desc: "Création d'une page HTML simple avec CSS.", niveau: "TC Sciences" },
+        { numero: 8, date: "27/03/2025", titre: "Évaluation formative", desc: "Test sur les chapitres 1 à 4.", niveau: "TC Lettres" },
+        { numero: 9, date: "31/03/2025", titre: "Introduction à la bureautique", desc: "Traitement de texte et tableur.", niveau: "TC Lettres" },
+        { numero: 10, date: "03/04/2025", titre: "Bilan et correction", desc: "Correction de l'évaluation et synthèse.", niveau: "TC Sciences" }
+    ];
+
+    const seancesGrid = document.getElementById('seances-grid-msp');
+    if (seancesGrid) {
+        seancesMSP.forEach(seance => {
+            const card = document.createElement('div');
+            card.className = 'seance-card-msp';
+            card.innerHTML = `
+                <div class="seance-header">
+                    <span class="seance-numero">Séance ${seance.numero}</span>
+                    <span class="seance-date"><i class="far fa-calendar-alt"></i> ${seance.date}</span>
+                </div>
+                <div class="seance-title">${seance.titre}</div>
+                <div class="seance-desc">${seance.desc}</div>
+                <div class="seance-desc"><i class="fas fa-users"></i> ${seance.niveau}</div>
+                <a href="#" class="seance-link">📄 Télécharger le rapport <i class="fas fa-download"></i></a>
+            `;
+            seancesGrid.appendChild(card);
+        });
+    }
+
+    // ========= CARROUSEL VIE SCOLAIRE V2 =========
+    const schoolTrackV2 = document.querySelector('.school-carousel-track-v2');
+    const schoolSlidesV2 = document.querySelectorAll('.school-slide-v2');
+    const prevLifeBtnV2 = document.querySelector('.prev-life-v2');
+    const nextLifeBtnV2 = document.querySelector('.next-life-v2');
+    let schoolIndexV2 = 0;
+
+    function updateSchoolCarouselV2() {
+        if (schoolTrackV2) {
+            schoolTrackV2.style.transform = `translateX(-${schoolIndexV2 * 100}%)`;
+        }
+    }
+
+    if (prevLifeBtnV2 && nextLifeBtnV2 && schoolSlidesV2.length) {
+        prevLifeBtnV2.addEventListener('click', () => {
+            schoolIndexV2 = (schoolIndexV2 - 1 + schoolSlidesV2.length) % schoolSlidesV2.length;
+            updateSchoolCarouselV2();
+        });
+        
+        nextLifeBtnV2.addEventListener('click', () => {
+            schoolIndexV2 = (schoolIndexV2 + 1) % schoolSlidesV2.length;
+            updateSchoolCarouselV2();
+        });
+    }
 });

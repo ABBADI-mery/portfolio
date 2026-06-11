@@ -720,7 +720,7 @@ input:checked + .slider:before {
     transform: translateY(-2px);
 }
 
-/* Onglets */
+/* Onglets CREMEF */
 .cremef-tabs-pro {
     display: flex;
     gap: 1rem;
@@ -813,7 +813,6 @@ input:checked + .slider:before {
     border-color: #c4b5fd;
 }
 
-/* Partie gauche : icône + infos */
 .module-info-left {
     display: flex;
     align-items: center;
@@ -861,7 +860,6 @@ input:checked + .slider:before {
     margin: 0;
 }
 
-/* Partie droite : bouton + */
 .module-plus-btn {
     width: 34px;
     height: 34px;
@@ -889,49 +887,6 @@ input:checked + .slider:before {
 
 .module-plus-btn:hover i {
     color: white;
-}
-
-/* Responsive */
-@media (max-width: 1100px) {
-    .modules-grid-pro {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 700px) {
-    .modules-grid-pro {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Theme sombre */
-body.dark-mode .module-pro-card {
-    background: #13131b;
-    border-color: #2a2a3e;
-}
-
-body.dark-mode .module-text h3 {
-    color: #e0d6f0;
-}
-
-body.dark-mode .module-text .module-pro-desc {
-    color: #b0a8d0;
-}
-
-body.dark-mode .module-icon-small {
-    background: #1e1e2e;
-}
-
-body.dark-mode .module-icon-small i {
-    color: #b47cff;
-}
-
-body.dark-mode .module-plus-btn {
-    background: #1e1e2e;
-}
-
-body.dark-mode .module-plus-btn i {
-    color: #b47cff;
 }
 
 /* Activités */
@@ -1116,7 +1071,7 @@ body.dark-mode .module-plus-btn i {
     transform: translateY(-2px);
 }
 
-/* ========= CARROUSEL ========= */
+/* ========= CARROUSEL ACTIVITÉS ========= */
 .carousel-container {
     position: relative;
     max-width: 900px;
@@ -1199,57 +1154,473 @@ body.dark-mode .module-plus-btn i {
     cursor: pointer;
 }
 
-/* ========= MSP ========= */
-.msp-grid {
+/* ========= MSP SECTION AMÉLIORÉE ========= */
+/* Bannière MSP */
+.msp-banner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    background: white;
+    border-radius: 32px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0eaff;
 }
 
-.msp-card {
-    background: #f7f3ff;
-    border-radius: 28px;
+.msp-banner-image {
+    position: relative;
+    height: 100%;
+    min-height: 280px;
+    overflow: hidden;
+}
+
+.msp-banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.msp-banner:hover .msp-banner-image img {
+    transform: scale(1.03);
+}
+
+.msp-banner-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.msp-badge {
+    background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.msp-banner-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.msp-banner-content h3 {
+    font-size: 1.6rem;
+    color: #2e1a6b;
+    margin-bottom: 0.5rem;
+}
+
+.msp-location {
+    color: #8b5cf6;
+    margin-bottom: 1rem;
+}
+
+.msp-info-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-bottom: 1.2rem;
+}
+
+.msp-info-item {
+    font-size: 0.9rem;
+    color: #5a4a7a;
+}
+
+.msp-info-item i {
+    width: 25px;
+    color: #8b5cf6;
+}
+
+.msp-description {
+    color: #7c6ca3;
+    line-height: 1.5;
+}
+
+/* Niveaux enseignés */
+.msp-levels {
+    margin-bottom: 2.5rem;
+}
+
+.msp-levels h3 {
+    font-size: 1.4rem;
+    color: #2e1a6b;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.levels-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.level-card {
+    background: white;
+    border-radius: 24px;
     padding: 1.5rem;
+    transition: all 0.3s;
+    border: 1px solid #f0eaff;
+    text-align: center;
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(139, 92, 246, 0.1);
+}
+
+.level-card i {
+    font-size: 2rem;
+    color: #8b5cf6;
+    margin-bottom: 0.8rem;
+}
+
+.level-card h4 {
+    font-size: 1.1rem;
+    color: #2e1a6b;
+    margin-bottom: 0.5rem;
+}
+
+.level-card p {
+    font-size: 0.8rem;
+    color: #7c6ca3;
+    margin-bottom: 0.8rem;
+}
+
+.level-badge {
+    display: inline-block;
+    background: #f0eaff;
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+}
+
+/* Salle informatique */
+.msp-lab {
+    margin-bottom: 2.5rem;
+}
+
+.msp-lab h3 {
+    font-size: 1.4rem;
+    color: #2e1a6b;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.lab-grid-v2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+    background: white;
+    border-radius: 28px;
+    padding: 1.8rem;
+    border: 1px solid #f0eaff;
+}
+
+.lab-images-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lab-image-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.lab-image-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.3s;
+    border-radius: 16px;
+}
+
+.lab-image-card:hover img {
+    transform: scale(1.03);
+}
+
+.lab-image-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+}
+
+.lab-description-v2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.lab-detail {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: #f8f4ff;
+    border-radius: 14px;
+    transition: all 0.3s;
+}
+
+.lab-detail i {
+    width: 30px;
+    font-size: 1.2rem;
+    color: #8b5cf6;
+}
+
+.lab-detail strong {
+    color: #2e1a6b;
+}
+
+.lab-detail:hover {
+    background: #efe6ff;
+    transform: translateX(5px);
+}
+
+/* Vie scolaire */
+.msp-school-life-v2 {
+    margin: 2.5rem 0;
+}
+
+.msp-school-life-v2 h3 {
+    font-size: 1.4rem;
+    color: #2e1a6b;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.school-life-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.8rem;
+}
+
+.school-carousel-wrapper {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.school-carousel-container-v2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.school-carousel-track-v2 {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.school-slide-v2 {
+    min-width: 100%;
+    position: relative;
+}
+
+.school-slide-v2 img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.school-caption-v2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    padding: 1rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.school-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.school-carousel-btn:hover {
+    background: #8b5cf6;
+    color: white;
+}
+
+.prev-life-v2 { left: 10px; }
+.next-life-v2 { right: 10px; }
+
+.school-info-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.school-info-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 20px;
+    transition: all 0.3s;
+    border: 1px solid #f0eaff;
+}
+
+.school-info-card i {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: #8b5cf6;
+}
+
+.school-info-card div {
+    flex: 1;
+}
+
+.school-info-card strong {
+    display: block;
+    color: #2e1a6b;
+    margin-bottom: 0.2rem;
+}
+
+.school-info-card span {
+    font-size: 0.8rem;
+    color: #7c6ca3;
+}
+
+.school-info-card:hover {
+    transform: translateX(5px);
+    border-color: #c4b5fd;
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.1);
+}
+
+/* Séances */
+.msp-seances h3 {
+    font-size: 1.4rem;
+    color: #2e1a6b;
+    margin: 2rem 0 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
 }
 
 .seances-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.2rem;
-    margin: 1rem 0 2rem;
+    margin-bottom: 2rem;
 }
 
-.seance-card {
+.seance-card-msp {
     background: white;
     border-radius: 20px;
     padding: 1rem;
-    border-left: 5px solid var(--violet-moyen);
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    border-left: 4px solid #8b5cf6;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
-.badge-group {
+.seance-card-msp:hover {
+    transform: translateX(5px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.1);
+}
+
+.seance-header {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.7rem;
-    margin: 1rem 0;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
 }
 
-.badge-msp {
-    background: var(--lavande);
-    padding: 0.4rem 1rem;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 500;
+.seance-numero {
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    padding: 0.2rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #8b5cf6;
+}
+
+.seance-date {
+    font-size: 0.7rem;
+    color: #a89ac2;
+}
+
+.seance-title {
+    font-weight: 600;
+    color: #2e1a6b;
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+}
+
+.seance-desc {
+    font-size: 0.75rem;
+    color: #7c6ca3;
+    margin-bottom: 0.5rem;
+}
+
+.seance-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    text-decoration: none;
+}
+
+.seance-link:hover {
+    text-decoration: underline;
+}
+
+/* Auto-évaluation */
+.msp-auto-eval {
+    background: linear-gradient(135deg, #f8f4ff, #fefbff);
+    border-radius: 24px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .citation {
     font-style: italic;
-    background: #e9e0ff;
-    padding: 1.2rem;
-    border-radius: 30px;
+    color: #5a4a7a;
+    line-height: 1.6;
+    margin: 0;
+    background: transparent;
+    padding: 0;
 }
 
+/* Boutons MSP */
 .msp-buttons {
     display: flex;
     gap: 1rem;
@@ -1308,12 +1679,16 @@ body.dark-mode .hero-section {
 
 body.dark-mode .about-cv-container,
 body.dark-mode .module-pro-card,
-body.dark-mode .seance-card,
-body.dark-mode .msp-card,
 body.dark-mode .cremef-banner,
 body.dark-mode .activities-grid-pro,
 body.dark-mode .modal-pro-content,
-body.dark-mode .modal-content {
+body.dark-mode .modal-content,
+body.dark-mode .msp-banner,
+body.dark-mode .level-card,
+body.dark-mode .lab-grid-v2,
+body.dark-mode .school-carousel-wrapper,
+body.dark-mode .school-info-card,
+body.dark-mode .seance-card-msp {
     background: #13131b;
     border-color: #2a2a3e;
 }
@@ -1323,20 +1698,29 @@ body.dark-mode .timeline-content-cv {
 }
 
 body.dark-mode .cv-name,
-body.dark-mode .module-pro-card h3,
-body.dark-mode .activity-pro-info h4 {
+body.dark-mode .module-text h3,
+body.dark-mode .activity-pro-info h4,
+body.dark-mode .msp-banner-content h3,
+body.dark-mode .level-card h4,
+body.dark-mode .school-info-card strong,
+body.dark-mode .seance-title {
     color: #e0d6f0;
 }
 
 body.dark-mode .cv-tagline,
-body.dark-mode .module-pro-desc,
-body.dark-mode .activity-pro-info p {
+body.dark-mode .module-text .module-pro-desc,
+body.dark-mode .activity-pro-info p,
+body.dark-mode .msp-description,
+body.dark-mode .level-card p,
+body.dark-mode .school-info-card span,
+body.dark-mode .seance-desc {
     color: #b0a8d0;
 }
 
 body.dark-mode .stat-card,
 body.dark-mode .tab-pro-btn,
-body.dark-mode .activity-pro-card {
+body.dark-mode .activity-pro-card,
+body.dark-mode .lab-detail {
     background: #1e1e2e;
 }
 
@@ -1357,6 +1741,10 @@ body.dark-mode .modal-pro-row {
 body.dark-mode .btn-secondary {
     background: #2a2a3e;
     color: #b47cff;
+}
+
+body.dark-mode .msp-auto-eval {
+    background: #13131b;
 }
 
 /* ========= RESPONSIVE ========= */
@@ -1422,11 +1810,13 @@ body.dark-mode .btn-secondary {
         font-size: 2.5rem;
     }
     
-    .cremef-banner {
+    .cremef-banner,
+    .msp-banner {
         grid-template-columns: 1fr;
     }
     
-    .cremef-banner-image {
+    .cremef-banner-image,
+    .msp-banner-image {
         min-height: 250px;
     }
     
@@ -1435,8 +1825,18 @@ body.dark-mode .btn-secondary {
         padding: 1.5rem;
     }
     
-    .msp-grid {
+    .levels-grid,
+    .lab-grid-v2,
+    .school-life-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .lab-images-v2 {
+        flex-direction: row;
+    }
+    
+    .lab-image-card {
+        flex: 1;
     }
     
     .activities-grid-pro {
@@ -1458,5 +1858,9 @@ body.dark-mode .btn-secondary {
 @media (max-width: 600px) {
     .container {
         padding: 0 1.2rem;
+    }
+    
+    .lab-images-v2 {
+        flex-direction: column;
     }
 }
