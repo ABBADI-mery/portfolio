@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Meryam Abbadi | Portfolio Enseignant Informatique</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ================= NAVIGATION ================= -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">Meryam<span class="dot">.</span>Abbadi</span>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="#apropos" class="nav-link">À propos</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">CREMEF <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#cremef">CREMEF</a></li>
+                            <li><a href="#activites">Activités</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#msp" class="nav-link">MSP</a></li>
+                </ul>
+                
+                <div class="theme-switch-wrapper">
+                    <i class="fas fa-sun"></i>
+                    <label class="theme-switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                
+                <div class="hamburger">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ================= SECTION ACCUEIL ================= -->
+        <section id="accueil" class="section hero-section">
+            <div class="container hero-container-split">
+                <div class="hero-left">
+                    <h1 class="hero-name-left">Meryam Abbadi</h1>
+                    <p class="hero-status"><i class="fas fa-laptop-code"></i> Étudiante stagiaire en <strong>Informatique</strong></p>
+                    <p class="hero-location-left"><i class="fas fa-map-marker-alt"></i> CREMEF Marrakech, Maroc</p>
+                    <div class="hero-divider"></div>
+                    <p class="hero-description">Passionnée par l'enseignement et les nouvelles technologies, je forme la prochaine génération aux métiers du numérique.</p>
+                    <div class="hero-cta-group">
+                        <a href="#" class="btn-cv"><i class="fas fa-file-pdf"></i> Voir mon CV</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="profile-card-glass">
+                        <img src="img/abbadi meryam.jpg" alt="Meryam Abbadi" class="profile-img-interactive">
+                        <div class="profile-overlay">
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-badge experience">
+                        <i class="fas fa-award"></i>
+                        <span>2025-2026</span>
+                        <small>Promotion</small>
+                    </div>
+                    <div class="floating-badge rating">
+                        <i class="fas fa-star"></i>
+                        <span>Informatique</span>
+                        <small>Cadre d'enseignement</small>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION À PROPOS ================= -->
+        <section id="apropos" class="section about-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-user-astronaut"></i> À propos</h2>
+                <div class="about-cv-container">
+                    <div class="about-left">
+                        <div class="cv-header">
+                            <h3 class="cv-name">Meryam Abbadi</h3>
+                            <p class="cv-tagline">Enseignante stagiaire en Informatique – passionnée par l'innovation pédagogique et les nouvelles technologies.</p>
+                            <div class="cv-contact">
+                                <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Marrakech, Maroc</div>
+                                <div class="contact-item"><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</div>
+                                <div class="contact-item"><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</div>
+                            </div>
+                        </div>
+                        <div class="cv-section">
+                            <h4 class="cv-section-title"><i class="fas fa-timeline"></i> Parcours & formation</h4>
+                            <div class="timeline-vertical-cv">
+                                <div class="timeline-item-cv">
+                                    <div class="timeline-dot-cv"></div>
+                                    <div class="timeline-content-cv">
+                                        <span class="timeline-year-cv">2022</span>
+                                        <h5>Baccalauréat Sciences Physiques</h5>
+                                        <p>Lycée scientifique, Marrakech – Mention Bien</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item-cv">
+                                    <div class="timeline-dot-cv"></div>
+                                    <div class="timeline-content-cv">
+                                        <span class="timeline-year-cv">2024</span>
+                                        <h5>Entrée en CREMEF</h5>
+                                        <p>Formation professionnelle – Spécialité Informatique</p>
+                                    </div>
+                                </div>
+                                <div class="timeline-item-cv">
+                                    <div class="timeline-dot-cv"></div>
+                                    <div class="timeline-content-cv">
+                                        <span class="timeline-year-cv">2025</span>
+                                        <h5>Licence en Éducation</h5>
+                                        <p>ENS Marrakech – Université Cadi Ayyad</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-right">
+                        <div class="cv-section">
+                            <h4 class="cv-section-title"><i class="fas fa-briefcase"></i> Expérience professionnelle</h4>
+                            <div class="timeline-vertical-cv">
+                                <div class="timeline-item-cv">
+                                    <div class="timeline-dot-cv"></div>
+                                    <div class="timeline-content-cv">
+                                        <span class="timeline-year-cv">2024 - Présent</span>
+                                        <h5>Enseignante stagiaire en Informatique</h5>
+                                        <p class="cv-location-cv">CREMEF Marrakech</p>
+                                        <ul class="cv-list"><li>Conception et animation de séances pédagogiques</li><li>Élaboration de ressources numériques</li><li>Projets interdisciplinaires et ateliers TICE</li></ul>
+                                    </div>
+                                </div>
+                                <div class="timeline-item-cv">
+                                    <div class="timeline-dot-cv"></div>
+                                    <div class="timeline-content-cv">
+                                        <span class="timeline-year-cv">2025 (8 semaines)</span>
+                                        <h5>Stage MSP – Lycée technique X</h5>
+                                        <p class="cv-location-cv">Niveau 2nde – Marrakech</p>
+                                        <ul class="cv-list"><li>Animation de 10 séances en informatique</li><li>Suivi personnalisé et évaluation des acquis</li><li>Rapport de stage et fiches pédagogiques</li></ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cv-section">
+                            <h4 class="cv-section-title"><i class="fas fa-code"></i> Compétences clés</h4>
+                            <div class="skills-badges-cv">
+                                <span class="skill-cv"><i class="fas fa-chalkboard"></i> Pédagogie active</span>
+                                <span class="skill-cv"><i class="fas fa-users"></i> Gestion de classe</span>
+                                <span class="skill-cv"><i class="fab fa-html5"></i> HTML/CSS/JS</span>
+                                <span class="skill-cv"><i class="fab fa-python"></i> Python / Algo</span>
+                                <span class="skill-cv"><i class="fas fa-network-wired"></i> Réseaux</span>
+                                <span class="skill-cv"><i class="fas fa-laptop"></i> TICE & Moodle</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION CREMEF ================= -->
+        <section id="cremef" class="section cremef-section">
+            <div class="container">
+                <div class="cremef-banner">
+                    <div class="cremef-banner-image">
+                        <img src="https://picsum.photos/id/100/600/400" alt="CREMEF Marrakech">
+                        <div class="cremef-banner-overlay"><span class="cremef-year"><i class="fas fa-calendar-alt"></i> 2024-2025</span></div>
+                    </div>
+                    <div class="cremef-banner-content">
+                        <div class="cremef-badge-title"><span class="badge-formation"><i class="fas fa-graduation-cap"></i> Formation professionnelle</span><h2>CREMEF <span>Marrakech</span></h2></div>
+                        <h3>Centre Régional des Métiers de l'Éducation et de la Formation</h3>
+                        <p>Le CREMEF forme les futurs enseignants aux métiers de l'éducation nationale. Une formation complète alliant théorie et pratique, avec un accent particulier sur l'innovation pédagogique et les technologies éducatives.</p>
+                        <div class="cremef-stats-grid">
+                            <div class="stat-card"><i class="fas fa-clock"></i><div><strong>450h+</strong><span>de formation</span></div></div>
+                            <div class="stat-card"><i class="fas fa-book"></i><div><strong>15</strong><span>modules</span></div></div>
+                            <div class="stat-card"><i class="fas fa-users"></i><div><strong>8 semaines</strong><span>de stage</span></div></div>
+                            <div class="stat-card"><i class="fas fa-certificate"></i><div><strong>Diplôme</strong><span>CR MEF</span></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cremef-tabs-pro">
+                    <button class="tab-pro-btn active" data-semestre="s1"><i class="fas fa-book-open"></i> Semestre 1 <span class="tab-count">7 modules</span></button>
+                    <button class="tab-pro-btn" data-semestre="s2"><i class="fas fa-chalkboard-user"></i> Semestre 2 <span class="tab-count">8 modules</span></button>
+                    <button class="tab-pro-btn" data-semestre="activites"><i class="fas fa-laptop-code"></i> Activités pratiques <span class="tab-count">4 projets</span></button>
+                </div>
+
+                <div id="semestre-s1" class="semestre-pro-content active"><div class="modules-grid-pro" id="modules-s1-grid"></div></div>
+                <div id="semestre-s2" class="semestre-pro-content"><div class="modules-grid-pro" id="modules-s2-grid"></div></div>
+                <div id="semestre-activites" class="semestre-pro-content">
+                    <div class="activities-grid-pro">
+                        <div class="activity-pro-card"><div class="activity-pro-icon"><i class="fas fa-globe"></i></div><div class="activity-pro-info"><h4>Projet E-learning</h4><p>Création d'une plateforme interactive pour les élèves</p><span class="activity-module">Module: TICE & RF4</span></div></div>
+                        <div class="activity-pro-card"><div class="activity-pro-icon"><i class="fas fa-robot"></i></div><div class="activity-pro-info"><h4>Atelier Robotique</h4><p>Initiation à la programmation avec des robots éducatifs</p><span class="activity-module">Module: Algorithmique</span></div></div>
+                        <div class="activity-pro-card"><div class="activity-pro-icon"><i class="fas fa-chalkboard"></i></div><div class="activity-pro-info"><h4>Simulation de classe</h4><p>Mise en situation pédagogique avec analyse des pratiques</p><span class="activity-module">Module: Analyse des pratiques</span></div></div>
+                        <div class="activity-pro-card"><div class="activity-pro-icon"><i class="fas fa-file-alt"></i></div><div class="activity-pro-info"><h4>Mémoire professionnel</h4><p>Recherche sur l'impact des TICE en classe de seconde</p><span class="activity-module">Module: Méthodologie</span></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MODAL UNIQUE -->
+            <div id="moduleModalPro" class="modal-pro">
+                <div class="modal-pro-content">
+                    <button class="modal-pro-close">&times;</button>
+                    <div class="modal-pro-header"><i id="modalProIcon" class="fas fa-graduation-cap"></i><h3 id="modalProTitle">Titre du module</h3></div>
+                    <div class="modal-pro-body" id="modalProDetails"></div>
+                    <div class="modal-pro-footer"><a href="#" class="modal-pro-btn primary"><i class="fas fa-video"></i> Voir présentation</a><a href="#" class="modal-pro-btn secondary"><i class="fas fa-file-alt"></i> Voir rapport</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ACTIVITÉS ================= -->
+        <section id="activites" class="section activities-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-laptop-code"></i> Activités pratiques & projets CREMEF</h2>
+                <p class="activities-intro">Activités pratiques et projets réalisés durant la formation CREMEF — Cliquez sur une image pour voir la description détaillée.</p>
+                <div class="carousel-container">
+                    <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                    <div class="carousel-track">
+                        <div class="carousel-slide" data-module="Méthodologie de recherche" data-desc="Élaboration d'un questionnaire et analyse de données qualitatives."><img src="https://picsum.photos/id/20/300/200" alt="Activité recherche"><div class="slide-caption">Méthodologie de recherche</div></div>
+                        <div class="carousel-slide" data-module="Développement web (RF4)" data-desc="Création d'un site vitrine pour un établissement fictif."><img src="https://picsum.photos/id/26/300/200" alt="Dev web"><div class="slide-caption">Développement Web</div></div>
+                        <div class="carousel-slide" data-module="Architecture & Réseaux" data-desc="Simulation réseau avec Cisco Packet Tracer."><img src="https://picsum.photos/id/0/300/200" alt="Réseaux"><div class="slide-caption">RF1 & RF3</div></div>
+                        <div class="carousel-slide" data-module="Algorithmique" data-desc="Projet jeu Python et structures de données."><img src="https://picsum.photos/id/1/300/200" alt="Algo"><div class="slide-caption">Algorithmique</div></div>
+                        <div class="carousel-slide" data-module="Production didactique" data-desc="Création d'une séquence pédagogique interactive."><img src="https://picsum.photos/id/15/300/200" alt="Pédagogie"><div class="slide-caption">Production didactique</div></div>
+                    </div>
+                    <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div id="activityModal" class="modal"><div class="modal-content"><span class="close-modal">&times;</span><h3 id="modalModuleTitle">Titre module</h3><p id="modalDesc">Description détaillée de l'activité...</p></div></div>
+            </div>
+        </section>
+
+        <!-- ================= MSP ================= -->
+        <section id="msp" class="section msp-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> MSP – Stage en établissement scolaire</h2>
+                <div class="msp-grid">
+                    <div class="msp-card"><h3><i class="fas fa-school"></i> Présentation</h3><p><strong>Lieu :</strong> Lycée technique X, Marrakech</p><p><strong>Durée :</strong> 8 semaines (février - avril 2025)</p><p><strong>Niveau :</strong> Seconde (2nde)</p><p><strong>Contexte :</strong> Stage d'observation et d'enseignement encadré.</p></div>
+                    <div class="msp-card"><h3><i class="fas fa-bullseye"></i> Objectifs</h3><ul><li>✅ Maîtriser la gestion de classe</li><li>✅ Concevoir des séances interactives</li><li>✅ Évaluer les acquis des élèves</li></ul></div>
+                </div>
+                <div class="msp-seances"><h3><i class="fas fa-calendar-week"></i> Tâches réalisées – 10 séances détaillées</h3><div class="seances-grid"></div></div>
+                <div class="msp-competences"><h3><i class="fas fa-medal"></i> Compétences développées</h3><div class="badge-group"><span class="badge-msp">Gestion de classe</span><span class="badge-msp">Communication</span><span class="badge-msp">Adaptation</span><span class="badge-msp">Esprit critique</span><span class="badge-msp">Planification</span></div></div>
+                <div class="msp-auto-eval"><h3><i class="fas fa-star-half-alt"></i> Auto-évaluation</h3><p class="citation">« Cette immersion m'a permis de transformer la théorie en pratique. J'ai su instaurer un climat de confiance avec les élèves et améliorer ma posture professionnelle. » — Meryam Abbadi</p></div>
+                <div class="msp-buttons"><a href="#" class="btn-primary"><i class="fas fa-download"></i> Télécharger rapport de stage</a><a href="#" class="btn-secondary"><i class="fas fa-certificate"></i> Voir attestation</a></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info"><p><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
+            <div class="footer-copy"><p>© 2025 Meryam Abbadi – Portfolio enseignant informatique</p></div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
