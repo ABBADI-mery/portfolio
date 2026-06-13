@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========= DONNÉES MODULES S2 =========
     const modulesS2 = [
-        { nom: "Évaluation", page: "module-s2-1.html" },
-        { nom: "Gestion 2", page: "module-s2-2.html" },
+        { nom: "Évaluation des apprentissages", page: "module-s2-1.html" },
+        { nom: "Gestion des apprentissages 2", page: "module-s2-2.html" },
         { nom: "Production didactique", page: "module-s2-3.html" },
         { nom: "Vie scolaire", page: "module-s2-4.html" },
         { nom: "RF3 – Réseau", page: "module-s2-5.html" },

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RF3 – Réseau - Meryam Abbadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style-common.css">
+    <link rel="stylesheet" href="css/style-module.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">Meryam<span class="dot">.</span>Abbadi</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">CREMEF <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cremef-s1.html">Semestre 1</a></li>
+                            <li><a href="cremef-s2.html">Semestre 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="msp.html" class="nav-link">MSP</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <i class="fas fa-sun"></i>
+                    <label class="theme-switch"><input type="checkbox" id="theme-toggle"><span class="slider round"></span></label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section module-detail-page">
+            <div class="container">
+                <div class="module-detail-header">
+                    <div class="module-detail-icon"><i class="fas fa-network-wired"></i></div>
+                    <div class="module-detail-info">
+                        <h1>RF3 – Réseau</h1>
+                        <div class="module-meta-detail">
+                            <span><i class="fas fa-chalkboard-user"></i> M. IQDOUR Radouane</span>
+                            <span><i class="far fa-clock"></i> 34 heures</span>
+                            <span><i class="fas fa-tag"></i> Semestre 2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-detail-content">
+                    <div class="module-description">
+                        <h2>Description du module</h2>
+                        <p>Le but de ce module est de renforcer la formation des enseignants stagiaires en leur fournissant des connaissances et des compétences en matière de réseaux informatiques.</p>
+                        
+                        <p>Les objectifs de ce module sont d'offrir aux étudiants une compréhension générale des réseaux et de leur architecture, ainsi que des services mis en place sur les ordinateurs qui composent ces réseaux.</p>
+
+                        <h2>Principaux axes du module</h2>
+                        <ul>
+                            <li>Introduction aux réseaux informatiques</li>
+                            <li>Classification des réseaux</li>
+                            <li>Modèle OSI</li>
+                            <li>Les équipements d'interconnexions</li>
+                            <li>Modèle TCP-IP</li>
+                            <li>Couche physique</li>
+                            <li>Couche liaison</li>
+                            <li>Couche internet</li>
+                        </ul>
+
+                        <h2>Compétences visées</h2>
+                        <p>Savoir exploiter les fonctionnalités d'un réseau local (Ethernet et Wifi) ainsi que celles d'Internet pour permettre aux utilisateurs de partager des ressources, de communiquer et de collaborer de manière efficace.</p>
+
+                        <!-- Activités pratiques -->
+                        <div class="activity-section">
+                            <h2><i class="fas fa-tasks"></i> Activités pratiques</h2>
+                            
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-num">01</span>
+                                    <h3>Simulation réseau avec Cisco Packet Tracer</h3>
+                                </div>
+                                <p>Création et simulation d'un réseau local simple avec des ordinateurs, commutateurs et routeurs.</p>
+                                <a href="docs/reseau/simulation-packet-tracer.pkt" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la simulation</a>
+                                <a href="docs/reseau/rapport-simulation.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir le rapport</a>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-num">02</span>
+                                    <h3>Configuration d'adressage IP</h3>
+                                </div>
+                                <p>Exercices pratiques sur le calcul et la configuration des adresses IP, masques de sous-réseau et passerelles par défaut.</p>
+                                <a href="docs/reseau/exercices-adressage-ip.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir les exercices</a>
+                                <a href="docs/reseau/correction-adressage-ip.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la correction</a>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-num">03</span>
+                                    <h3>Analyse des protocoles réseau</h3>
+                                </div>
+                                <p>Utilisation de Wireshark pour capturer et analyser les trames réseau (HTTP, DNS, TCP).</p>
+                                <a href="docs/reseau/analyse-protocoles.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir l'analyse</a>
+                            </div>
+                            
+                            <div class="activity-card">
+                                <div class="activity-header">
+                                    <span class="activity-num">04</span>
+                                    <h3>Présentation sur les modèles OSI et TCP-IP</h3>
+                                </div>
+                                <p>Présentation comparative des modèles OSI et TCP-IP avec illustration des protocoles de chaque couche.</p>
+                                <a href="docs/reseau/modeles-osi-tcpip.pptx" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la présentation</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="module-ressources">
+                        <h3><i class="fas fa-download"></i> Ressources</h3>
+                        <div class="ressources-list">
+                            <a href="docs/modules/c5s2.pdf" class="ressource-item"><i class="fas fa-file-pdf"></i> Support de cours PDF</a>
+                            <a href="#" class="ressource-item"><i class="fas fa-tasks"></i> Travaux pratiques</a>
+                            <a href="docs/modules/r5s2.pdf" class="ressource-item"><i class="fas fa-file-alt"></i> Rapport</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="module-navigation">
+                    <a href="module-s2-4.html" class="btn-outline nav-prev"><i class="fas fa-arrow-left"></i> Module précédent</a>
+                    <a href="cremef-s2.html" class="btn-outline"><i class="fas fa-arrow-left"></i> Retour au semestre</a>
+                    <a href="module-s2-6.html" class="btn-primary nav-next">Module suivant <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info"><p><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
+            <div class="footer-copy"><p>© 2025 Meryam Abbadi – Portfolio enseignant informatique</p></div>
+        </div>
+    </footer>
+
+    <script src="js/script-common.js"></script>
+    <script src="js/script-module.js"></script>
+</body>
+</html>
