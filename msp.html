@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSP - Meryam Abbadi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style-common.css">
+    <link rel="stylesheet" href="css/style-msp.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html" class="logo-text">Meryam<span class="dot">.</span>Abbadi</a>
+            </div>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#apropos" class="nav-link">À propos</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">CREMEF <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="cremef-s1.html">Semestre 1</a></li>
+                            <li><a href="cremef-s2.html">Semestre 2</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="msp.html" class="nav-link active">MSP</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <i class="fas fa-sun"></i>
+                    <label class="theme-switch"><input type="checkbox" id="theme-toggle"><span class="slider round"></span></label>
+                    <i class="fas fa-moon"></i>
+                </div>
+                <div class="hamburger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section msp-section">
+            <div class="container">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> MSP – Stage en établissement scolaire</h2>
+                
+                <!-- Bannière avec image et infos -->
+                <div class="msp-banner">
+                    <div class="msp-banner-image">
+                        <img src="img/Entrée du lycee.png" alt="Lycée Qualifiant Echaraf">
+                        <div class="msp-banner-overlay"><span class="msp-badge"><i class="fas fa-school"></i> Stage professionnel</span></div>
+                    </div>
+                    <div class="msp-banner-content">
+                        <h3>Lycée Qualifiant Echaraf</h3>
+                        <p class="msp-location"><i class="fas fa-map-marker-alt"></i> Marrakech, Maroc</p>
+                        <div class="msp-info-grid">
+                            <div class="msp-info-item"><i class="fas fa-calendar-alt"></i> <strong>Durée :</strong> 8 semaines (février - avril 2026)</div>
+                            <div class="msp-info-item"><i class="fas fa-user-tie"></i> <strong>Directeur :</strong> Mohammed Asdoum</div>
+                            <div class="msp-info-item"><i class="fas fa-chalkboard-user"></i> <strong>Professeure de stage :</strong> Mme Sami Rachida</div>
+                        </div>
+                        <p class="msp-description">Stage d'observation et d'enseignement encadré au sein du Lycée Qualifiant Echaraf, avec prise en charge de classes de tronc commun.</p>
+                    </div>
+                </div>
+
+                <!-- Niveaux enseignés -->
+                <div class="msp-levels">
+                    <h3><i class="fas fa-graduation-cap"></i> Niveaux enseignés</h3>
+                    <div class="levels-grid">
+                        <div class="level-card"><i class="fas fa-flask"></i><h4>Tronc commun Sciences</h4><p>1 classe · 32 élèves · Matière: Informatique</p><span class="level-badge">Séance 2</span></div>
+                        <div class="level-card"><i class="fas fa-book"></i><h4>Tronc commun Lettres</h4><p>1 classe · 33 élèves · Matière: Informatique</p><span class="level-badge">Séance 1</span></div>
+                    </div>
+                </div>
+
+                <!-- Salle d'informatique - INFOS GAUCHE + CARROUSEL DROITE (sans captions) -->
+                <div class="msp-lab">
+                    <h3><i class="fas fa-laptop-code"></i> Salle d'informatique</h3>
+                    <div class="lab-layout">
+                        <div class="lab-description-v2">
+                            <div class="lab-detail"><i class="fas fa-chalkboard"></i> <strong>Disposition en U</strong> - Favorise la visibilité et l'interaction</div>
+                            <div class="lab-detail"><i class="fas fa-desktop"></i> <strong>14 ordinateurs fonctionnels</strong></div>
+                            <div class="lab-detail"><i class="fas fa-video"></i> <strong>Vidéoprojecteur</strong> pour les présentations</div>
+                            <div class="lab-detail"><i class="fas fa-check-circle"></i> <strong>Salle bien équipée</strong> pour les TP</div>
+                            <div class="lab-detail"><i class="fas fa-users"></i> <strong>Environnement propice</strong> à l'apprentissage</div>
+                        </div>
+                        <div class="lab-carousel-wrapper">
+                            <div class="lab-carousel-container">
+                                <button class="lab-carousel-btn prev-lab"><i class="fas fa-chevron-left"></i></button>
+                                <div class="lab-carousel-track">
+                                    <div class="lab-slide">
+                                        <img src="img/salle1.jpeg" alt="Salle info vue 1">
+                                    </div>
+                                    <div class="lab-slide">
+                                        <img src="img/salle2.jpeg" alt="Salle info vue 2">
+                                    </div>
+                                </div>
+                                <button class="lab-carousel-btn next-lab"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="lab-carousel-indicators"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vie scolaire - Compétition Arduino -->
+                <div class="msp-competition">
+                    <h3><i class="fas fa-microchip"></i> Vie scolaire - Compétition Arduino</h3>
+                    <div class="competition-layout">
+                        <div class="competition-carousel-wrapper">
+                            <div class="competition-carousel-container">
+                                <button class="competition-carousel-btn prev-competition"><i class="fas fa-chevron-left"></i></button>
+                                <div class="competition-carousel-track">
+                                    <div class="competition-slide">
+                                        <img src="img/vie1.jpeg" alt="Compétition Arduino 1">
+                                        <div class="competition-caption">Présentation des projets</div>
+                                    </div>
+                                    <div class="competition-slide">
+                                        <img src="img/vie2.jpeg" alt="Compétition Arduino 2">
+                                        <div class="competition-caption">Élèves en démonstration</div>
+                                    </div>
+                                    <div class="competition-slide">
+                                        <img src="img/vie3.jpeg" alt="Compétition Arduino 3">
+                                        <div class="competition-caption">Remise des prix</div>
+                                    </div>
+                                    <div class="competition-slide">
+                                        <img src="img/vie4.jpeg" alt="Compétition Arduino 4">
+                                        <div class="competition-caption">Équipe gagnante</div>
+                                    </div>
+                                </div>
+                                <button class="competition-carousel-btn next-competition"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                            <div class="competition-indicators"></div>
+                        </div>
+                        <div class="competition-description">
+                            <div class="competition-text-card">
+                                <h4>Participation à la compétition Arduino</h4>
+                                <p>Nous avons eu l'opportunité de participer à une compétition de robotique. Les élèves ont présenté leurs projets innovants utilisant des cartes Arduino, démontrant leur créativité et leurs compétences en programmation.</p>
+                                <div class="competition-date-info">
+                                    <span><i class="fas fa-calendar-alt"></i> Mars 2026</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rapports des séances - TABLEAU -->
+                <div class="msp-seances">
+                    <h3><i class="fas fa-file-alt"></i> Rapports des séances effectuées</h3>
+                    <div class="seances-table-wrapper">
+                        <table class="seances-table">
+                            <thead>
+                                <tr>
+                                    <th>Séance</th>
+                                    <th>Date</th>
+                                    <th>Rapport</th>
+                                    <th>Fiche pédagogique</th>
+                                </tr>
+                            </thead>
+                            <tbody id="seances-table-body"></tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Auto-évaluation - CITATION EN HAUT + CARROUSEL GAUCHE / REMERCIEMENTS DROITE -->
+<div class="msp-auto-eval-section">
+    <h3><i class="fas fa-star-half-alt"></i> Auto-évaluation</h3>
+    
+    <!-- Citation en haut -->
+    <div class="auto-eval-quote-top">
+        <i class="fas fa-quote-left"></i>
+        <p>Cette immersion m'a permis de transformer la théorie en pratique. J'ai su instaurer un climat de confiance avec les élèves et améliorer ma posture professionnelle.</p>
+        <i class="fas fa-quote-right"></i>
+    </div>
+    
+    <!-- Layout 2 colonnes : carrousel à gauche / remerciements à droite -->
+    <div class="auto-eval-layout">
+        <!-- Carrousel à gauche -->
+        <div class="auto-eval-carousel-wrapper">
+            <div class="auto-eval-carousel-container">
+                <button class="auto-eval-carousel-btn prev-auto"><i class="fas fa-chevron-left"></i></button>
+                <div class="auto-eval-carousel-track">
+                    <div class="auto-eval-slide">
+                        <img src="img/prof.jpeg" alt="Classe en action">
+                    </div>
+                    <div class="auto-eval-slide">
+                        <img src="img/msp1.jpeg" alt="Élèves travaillant">
+                    </div>
+                    <div class="auto-eval-slide">
+                        <img src="img/cour2.jpeg" alt="Séance pédagogique">
+                    </div>
+                </div>
+                <button class="auto-eval-carousel-btn next-auto"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="auto-eval-indicators"></div>
+        </div>
+        
+        <!-- Remerciements à droite -->
+        <div class="auto-eval-thanks-right">
+            <div class="thanks-card">
+                <h4><i class="fas fa-heart"></i> Remerciements</h4>
+                <p>Je tiens à exprimer ma profonde gratitude à :</p>
+                <ul>
+                    <li><strong>Mme Sami Rachida</strong>, ma professeure de stage, pour son accompagnement précieux, ses conseils avisés et sa bienveillance tout au long de cette expérience.</li>
+                    <li><strong>M. Mohammed Asdoum</strong>, directeur du lycée, pour son accueil chaleureux et sa confiance.</li>
+                    <li><strong>Toute l'équipe pédagogique</strong> du Lycée Qualifiant Echaraf pour leur disponibilité et leur partage d'expérience.</li>
+                    <li><strong>Les élèves</strong> pour leur participation active et leur motivation.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-info"><p><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
+            <div class="footer-copy"><p>© 2025 Meryam Abbadi – Portfolio enseignant informatique</p></div>
+        </div>
+    </footer>
+
+    <script src="js/script-common.js"></script>
+    <script src="js/script-msp.js"></script>
+</body>
+</html>
