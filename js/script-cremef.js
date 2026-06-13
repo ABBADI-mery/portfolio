@@ -1,14 +1,15 @@
 // script-cremef.js - Pour cremef-s1.html et cremef-s2.html
 document.addEventListener('DOMContentLoaded', () => {
-    // ========= DONNÉES MODULES S1 =========
+    // ========= DONNÉES MODULES S1 (8 modules) =========
     const modulesS1 = [
         { nom: "Méthodologie de recherche", page: "module-s1-1.html" },
-        { nom: "Gestion 1", page: "module-s1-2.html" },
-        { nom: "Planification", page: "module-s1-3.html" },
+        { nom: "Gestion des apprentissages", page: "module-s1-2.html" },
+        { nom: "Planification des apprentissages", page: "module-s1-3.html" },
         { nom: "TICE", page: "module-s1-4.html" },
         { nom: "Sciences de l'éducation", page: "module-s1-5.html" },
-        { nom: "RF1 – Architecture d'ordinateurs", page: "module-s1-6.html" },
-        { nom: "RF2 – Algorithmique et programmation", page: "module-s1-7.html" }
+        { nom: "Architecture des ordinateurs", page: "module-s1-6.html" },
+        { nom: "Algorithmique et programmation", page: "module-s1-7.html" },
+        { nom: "Didactique ", page: "module-s1-8.html" }
     ];
 
     // ========= DONNÉES MODULES S2 =========

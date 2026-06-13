@@ -950,3 +950,1279 @@ body.dark-mode .presentation-card {
 body.dark-mode .presentation-card strong {
     color: #e0d6f0;
 }
+/* ========= ACTIVITÉ PRATIQUE - NOUVEAU LAYOUT ========= */
+.activity-layout-new {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+    background: white;
+    border-radius: 24px;
+    padding: 1.5rem;
+    border: 1px solid #f0eaff;
+}
+
+.activity-description-new {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.activity-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    width: fit-content;
+}
+
+.activity-description-new h3 {
+    font-size: 1.1rem;
+    color: #2e1a6b;
+    margin: 0;
+}
+
+.activity-description-new p {
+    color: #5a4a7a;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.seance-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.seance-detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    background: #f8f4ff;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 120px;
+}
+
+.seance-detail-item i {
+    font-size: 1rem;
+    color: #8b5cf6;
+    width: 25px;
+}
+
+.seance-detail-item div {
+    flex: 1;
+}
+
+.seance-detail-item strong {
+    display: block;
+    font-size: 0.7rem;
+    color: #2e1a6b;
+}
+
+.seance-detail-item span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+}
+
+.topics-covered h4 {
+    font-size: 0.9rem;
+    color: #2e1a6b;
+    margin: 0.5rem 0;
+}
+
+.topics-covered ul {
+    margin-left: 1.2rem;
+    color: #5a4a7a;
+}
+
+.topics-covered ul li {
+    margin-bottom: 0.3rem;
+    font-size: 0.8rem;
+}
+
+.presentation-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f4ff, #ffffff);
+    border-radius: 14px;
+    margin-top: 0.5rem;
+    border: 1px solid #f0eaff;
+}
+
+.presentation-link i {
+    font-size: 1.8rem;
+    color: #e74c3c;
+}
+
+.presentation-link div {
+    flex: 1;
+}
+
+.presentation-link strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2e1a6b;
+}
+
+.presentation-link span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+    display: block;
+    margin: 0.2rem 0;
+}
+
+.activity-carousel-wrapper-new {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f0eaff;
+    display: flex;
+    flex-direction: column;
+}
+
+.activity-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.activity-carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.activity-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.activity-slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(46, 26, 107, 0.9), transparent);
+    color: white;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.activity-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.activity-carousel-btn i {
+    font-size: 1rem;
+    color: #2e1a6b;
+}
+
+.activity-carousel-btn:hover {
+    background: #8b5cf6;
+}
+
+.activity-carousel-btn:hover i {
+    color: white;
+}
+
+.prev-activity { left: 10px; }
+.next-activity { right: 10px; }
+
+.activity-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #f0eaff;
+}
+
+.activity-dot {
+    width: 8px;
+    height: 8px;
+    background: #d9c8ff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.activity-dot.active {
+    background: #8b5cf6;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .activity-layout-new {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .activity-slide img {
+        height: 250px;
+    }
+    
+    .seance-details {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .activity-slide img {
+        height: 200px;
+    }
+    
+    .activity-carousel-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .presentation-link {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Theme sombre */
+body.dark-mode .activity-layout-new,
+body.dark-mode .activity-carousel-wrapper-new {
+    background: #13131b;
+    border-color: #2a2a3e;
+}
+
+body.dark-mode .seance-detail-item,
+body.dark-mode .presentation-link {
+    background: #1e1e2e;
+}
+
+body.dark-mode .activity-description-new h3,
+body.dark-mode .topics-covered h4,
+body.dark-mode .seance-detail-item strong,
+body.dark-mode .presentation-link strong {
+    color: #e0d6f0;
+}
+
+body.dark-mode .activity-description-new p,
+body.dark-mode .topics-covered ul li,
+body.dark-mode .seance-detail-item span,
+body.dark-mode .presentation-link span {
+    color: #b0a8d0;
+}
+
+body.dark-mode .activity-carousel-indicators {
+    background: #13131b;
+    border-top-color: #2a2a3e;
+}
+/* ========= ACTIVITÉ PRATIQUE ========= */
+.activity-section {
+    margin-top: 2rem;
+}
+
+.activity-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-badge-header {
+    display: inline-block;
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    padding: 0.3rem 1rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.activity-content-full {
+    background: white;
+    border-radius: 20px;
+    padding: 1.5rem;
+    border: 1px solid #f0eaff;
+    margin-bottom: 1.5rem;
+}
+
+.activity-description-full h3 {
+    font-size: 1rem;
+    color: #8b5cf6;
+    margin-bottom: 0.8rem;
+}
+
+.activity-description-full p {
+    color: #5a4a7a;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.seance-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.seance-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background: #f8f4ff;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #5a4a7a;
+}
+
+.seance-info-item i {
+    color: #8b5cf6;
+}
+
+/* Plan de séance */
+.seance-plan {
+    margin: 1.5rem 0;
+}
+
+.seance-plan h4 {
+    font-size: 0.9rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.plan-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+}
+
+.plan-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    background: #f8f4ff;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.plan-item:hover {
+    background: #efe6ff;
+    transform: translateX(3px);
+}
+
+.plan-num {
+    width: 28px;
+    height: 28px;
+    background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: white;
+}
+
+.plan-text {
+    font-size: 0.8rem;
+    color: #5a4a7a;
+}
+
+.presentation-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f4ff, #ffffff);
+    border-radius: 14px;
+    margin-top: 1rem;
+    border: 1px solid #f0eaff;
+}
+
+.presentation-link i {
+    font-size: 1.8rem;
+    color: #e74c3c;
+}
+
+.presentation-link div {
+    flex: 1;
+}
+
+.presentation-link strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2e1a6b;
+}
+
+.presentation-link span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+    display: block;
+    margin: 0.2rem 0;
+}
+
+/* Carrousel en bas */
+.carousel-bottom-section {
+    margin-top: 1.5rem;
+}
+
+.carousel-bottom-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-carousel-wrapper {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f0eaff;
+}
+
+.activity-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.activity-carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.activity-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.activity-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(46, 26, 107, 0.9), transparent);
+    color: white;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.activity-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.activity-carousel-btn i {
+    font-size: 1rem;
+    color: #2e1a6b;
+}
+
+.activity-carousel-btn:hover {
+    background: #8b5cf6;
+}
+
+.activity-carousel-btn:hover i {
+    color: white;
+}
+
+.prev-activity { left: 10px; }
+.next-activity { right: 10px; }
+
+.activity-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #f0eaff;
+}
+
+.activity-dot {
+    width: 8px;
+    height: 8px;
+    background: #d9c8ff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.activity-dot.active {
+    background: #8b5cf6;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .plan-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-slide img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .activity-slide img {
+        height: 200px;
+    }
+    
+    .activity-carousel-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .presentation-link {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .seance-info {
+        flex-direction: column;
+    }
+}
+
+/* Theme sombre */
+body.dark-mode .activity-content-full,
+body.dark-mode .activity-carousel-wrapper {
+    background: #13131b;
+    border-color: #2a2a3e;
+}
+
+body.dark-mode .plan-item,
+body.dark-mode .seance-info-item,
+body.dark-mode .presentation-link {
+    background: #1e1e2e;
+}
+
+body.dark-mode .plan-text,
+body.dark-mode .activity-description-full p {
+    color: #b0a8d0;
+}
+
+body.dark-mode .seance-plan h4,
+body.dark-mode .presentation-link strong {
+    color: #e0d6f0;
+}
+
+body.dark-mode .activity-carousel-indicators {
+    background: #13131b;
+    border-top-color: #2a2a3e;
+}
+/* ========= MÉTHODE PÉDAGOGIQUE ========= */
+.method-section {
+    margin-top: 1.5rem;
+}
+
+.method-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.method-card {
+    background: linear-gradient(135deg, #f8f4ff, #ffffff);
+    border-radius: 20px;
+    padding: 1.2rem;
+    border: 1px solid #f0eaff;
+}
+
+.method-card p {
+    color: #5a4a7a;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.method-card p:last-child {
+    margin-bottom: 0;
+}
+
+.method-card strong {
+    color: #8b5cf6;
+}
+
+/* ========= ÉTAPES DES SÉANCES ========= */
+.steps-section {
+    margin-top: 1.5rem;
+}
+
+.steps-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.step-card {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid #f0eaff;
+    transition: all 0.3s;
+}
+
+.step-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.08);
+}
+
+.step-num {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content h4 {
+    font-size: 0.9rem;
+    color: #2e1a6b;
+    margin-bottom: 0.3rem;
+}
+
+.step-content p {
+    font-size: 0.75rem;
+    color: #7c6ca3;
+    line-height: 1.4;
+}
+
+/* ========= PROJET INFO ========= */
+.project-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.project-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    background: #f8f4ff;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    color: #5a4a7a;
+}
+
+.project-info-item i {
+    color: #8b5cf6;
+}
+
+/* ========= ACTIVITÉ CONTENT ========= */
+.activity-content-full {
+    background: white;
+    border-radius: 20px;
+    padding: 1.2rem;
+    border: 1px solid #f0eaff;
+    margin-bottom: 1rem;
+}
+
+.activity-badge-header {
+    display: inline-block;
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    margin-bottom: 0.8rem;
+}
+
+.activity-description-full h3 {
+    font-size: 1rem;
+    color: #2e1a6b;
+    margin-bottom: 0.5rem;
+}
+
+.activity-description-full p {
+    color: #5a4a7a;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.presentation-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f4ff, #ffffff);
+    border-radius: 14px;
+    margin-top: 1rem;
+    border: 1px solid #f0eaff;
+}
+
+.presentation-link i {
+    font-size: 1.8rem;
+    color: #e74c3c;
+}
+
+.presentation-link div {
+    flex: 1;
+}
+
+.presentation-link strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2e1a6b;
+}
+
+.presentation-link span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+    display: block;
+    margin: 0.2rem 0;
+}
+
+/* ========= CARROUSEL ========= */
+.carousel-bottom-section {
+    margin-top: 1.5rem;
+}
+
+.carousel-bottom-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-carousel-wrapper {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #f0eaff;
+}
+
+.activity-carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.activity-carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.activity-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.activity-slide img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.slide-caption-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(46, 26, 107, 0.9), transparent);
+    color: white;
+    padding: 0.8rem;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.activity-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s;
+}
+
+.activity-carousel-btn i {
+    font-size: 1rem;
+    color: #2e1a6b;
+}
+
+.activity-carousel-btn:hover {
+    background: #8b5cf6;
+}
+
+.activity-carousel-btn:hover i {
+    color: white;
+}
+
+.prev-activity { left: 10px; }
+.next-activity { right: 10px; }
+
+.activity-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px;
+    background: white;
+    border-top: 1px solid #f0eaff;
+}
+
+.activity-dot {
+    width: 8px;
+    height: 8px;
+    background: #d9c8ff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.activity-dot.active {
+    background: #8b5cf6;
+    width: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .activity-slide img {
+        height: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .activity-slide img {
+        height: 200px;
+    }
+    
+    .activity-carousel-btn {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .presentation-link {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .step-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+/* Theme sombre */
+body.dark-mode .method-card,
+body.dark-mode .step-card,
+body.dark-mode .activity-content-full,
+body.dark-mode .presentation-link,
+body.dark-mode .activity-carousel-wrapper {
+    background: #13131b;
+    border-color: #2a2a3e;
+}
+
+body.dark-mode .method-card p,
+body.dark-mode .step-content p,
+body.dark-mode .activity-description-full p,
+body.dark-mode .project-info-item {
+    color: #b0a8d0;
+    background: #1e1e2e;
+}
+
+body.dark-mode .step-content h4,
+body.dark-mode .activity-description-full h3,
+body.dark-mode .presentation-link strong {
+    color: #e0d6f0;
+}
+
+body.dark-mode .activity-carousel-indicators {
+    background: #13131b;
+    border-top-color: #2a2a3e;
+}
+/* ========= LISTE DES COURS ========= */
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: #f8f4ff;
+    border-radius: 14px;
+    transition: all 0.3s;
+}
+
+.course-item:hover {
+    background: #efe6ff;
+    transform: translateX(5px);
+}
+
+.course-item i {
+    font-size: 1.2rem;
+    color: #8b5cf6;
+    width: 35px;
+    text-align: center;
+}
+
+.course-item div {
+    flex: 1;
+}
+
+.course-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2e1a6b;
+    margin-bottom: 0.2rem;
+}
+
+.course-item span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.btn-view {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    text-decoration: none;
+    margin-top: 0.2rem;
+}
+
+.btn-view:hover {
+    text-decoration: underline;
+    color: #6d3bc7;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .course-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .course-item i {
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Theme sombre */
+body.dark-mode .course-item {
+    background: #1e1e2e;
+}
+
+body.dark-mode .course-item strong {
+    color: #e0d6f0;
+}
+
+body.dark-mode .course-item span {
+    color: #b0a8d0;
+}/* ========= MÉTHODE PÉDAGOGIQUE ========= */
+.method-section {
+    margin-top: 1.5rem;
+}
+
+.method-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.method-card {
+    background: linear-gradient(135deg, #f8f4ff, #ffffff);
+    border-radius: 20px;
+    padding: 1.2rem;
+    border: 1px solid #f0eaff;
+}
+
+.method-card p {
+    color: #5a4a7a;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+}
+
+.method-card p:last-child {
+    margin-bottom: 0;
+}
+
+.method-card strong {
+    color: #8b5cf6;
+}
+
+/* ========= PRÉSENTATION CARD ========= */
+.presentation-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f4ff, #ffffff);
+    border-radius: 14px;
+    margin: 1rem 0;
+    border: 1px solid #f0eaff;
+}
+
+.presentation-card i {
+    font-size: 1.8rem;
+    color: #e74c3c;
+    width: 50px;
+    text-align: center;
+}
+
+.presentation-card div {
+    flex: 1;
+}
+
+.presentation-card strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2e1a6b;
+    margin-bottom: 0.2rem;
+}
+
+.presentation-card span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+/* ========= LISTE DES COURS ========= */
+.courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.course-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem;
+    background: #f8f4ff;
+    border-radius: 14px;
+    transition: all 0.3s;
+}
+
+.course-item:hover {
+    background: #efe6ff;
+    transform: translateX(5px);
+}
+
+.course-item i {
+    font-size: 1.2rem;
+    color: #8b5cf6;
+    width: 35px;
+    text-align: center;
+}
+
+.course-item div {
+    flex: 1;
+}
+
+.course-item strong {
+    display: block;
+    font-size: 0.85rem;
+    color: #2e1a6b;
+    margin-bottom: 0.2rem;
+}
+
+.course-item span {
+    font-size: 0.7rem;
+    color: #7c6ca3;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.btn-view {
+    display: inline-block;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    text-decoration: none;
+    margin-top: 0.2rem;
+}
+
+.btn-view:hover {
+    text-decoration: underline;
+    color: #6d3bc7;
+}
+
+/* ========= ACTIVITÉ CONTENT ========= */
+.activity-section {
+    margin-top: 1.5rem;
+}
+
+.activity-section h2 {
+    font-size: 1.2rem;
+    color: #2e1a6b;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.activity-content-full {
+    background: white;
+    border-radius: 20px;
+    padding: 1.2rem;
+    border: 1px solid #f0eaff;
+    margin-bottom: 1rem;
+}
+
+.activity-badge-header {
+    display: inline-block;
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    padding: 0.2rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.7rem;
+    color: #8b5cf6;
+    margin-bottom: 0.8rem;
+}
+
+.activity-description-full h3 {
+    font-size: 1rem;
+    color: #2e1a6b;
+    margin-bottom: 0.5rem;
+}
+
+.activity-description-full p {
+    color: #5a4a7a;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .presentation-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .course-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .course-item i {
+        margin-bottom: 0.3rem;
+    }
+}
+
+/* Theme sombre */
+body.dark-mode .method-card,
+body.dark-mode .presentation-card,
+body.dark-mode .activity-content-full {
+    background: #13131b;
+    border-color: #2a2a3e;
+}
+
+body.dark-mode .method-card p,
+body.dark-mode .presentation-card span,
+body.dark-mode .activity-description-full p {
+    color: #b0a8d0;
+}
+
+body.dark-mode .presentation-card strong,
+body.dark-mode .activity-description-full h3 {
+    color: #e0d6f0;
+}
+
+body.dark-mode .course-item {
+    background: #1e1e2e;
+}
+
+body.dark-mode .course-item strong {
+    color: #e0d6f0;
+}
+
+body.dark-mode .course-item span {
+    color: #b0a8d0;
+}
