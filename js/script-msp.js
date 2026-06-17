@@ -125,16 +125,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ========= TABLEAU DES SÉANCES =========
     const seances = [
-        { num: 1, date: "03/02/2026", rapport: "docs/Rapports/seance1.pdf", fiche: "docs/Fiches/seance1.pdf" },
-        { num: 2, date: "06/02/2026", rapport: "docs/Rapports/seance2.pdf", fiche: "docs/Fiches/seance2.pdf" },
-        { num: 3, date: "10/02/2026", rapport: "docs/Rapports/seance3.pdf", fiche: "docs/Fiches/seance3.pdf" },
-        { num: 4, date: "13/02/2026", rapport: "docs/Rapports/seance4.pdf", fiche: "docs/Fiches/seance4.pdf" },
-        { num: 5, date: "17/02/2026", rapport: "docs/Rapports/seance5.pdf", fiche: "docs/Fiches/seance5.pdf" },
-        { num: 6, date: "20/02/2026", rapport: "docs/Rapports/seance6.pdf", fiche: "docs/Fiches/seance6.pdf" },
-        { num: 7, date: "24/02/2026", rapport: "docs/Rapports/seance7.pdf", fiche: "docs/Fiches/seance7.pdf" },
-        { num: 8, date: "27/02/2026", rapport: "docs/Rapports/seance8.pdf", fiche: "docs/Fiches/seance8.pdf" },
-        { num: 9, date: "02/03/2026", rapport: "docs/Rapports/seance9.pdf", fiche: "docs/Fiches/seance9.pdf" },
-        { num: 10, date: "05/03/2026", rapport: "docs/Rapports/seance10.pdf", fiche: "docs/Fiches/seance10.pdf" }
+        { num: 1, date: "06/02/2026", rapport: "docs/Rapports/seance1.pdf", ressources: "docs/Fiches/seance1.pdf" },
+        { num: 2, date: "13/02/2026", rapport: "docs/Rapports/seance2.pdf", ressources: "docs/Rapports/SérieExseance2.pdf" },
+        { num: 3, date: "20/02/2026", rapport: "docs/Rapports/seance3.pdf", ressources: "docs/Rapports/controle 1TC .pdf" },
+        { num: 4, date: "27/02/2026", rapport: "docs/Rapports/seance4.pdf", ressources: "docs/Rapports/seance4.pdf" },
+        { num: 5, date: "06/03/2026", rapport: "docs/Rapports/6-13-03.pdf", ressources: "docs/Fiches/seance5.pdf" },
+        { num: 6, date: "13/03/2026", rapport: "docs/Rapports/6-13-03.pdf", ressources: "docs/Fiches/seance6.pdf" },
+        { num: 7, date: "06/04/2026", rapport: "docs/Rapports/06-04.pdf", ressources: "docs/Rapports/structure de controle.pdf" },
+        { num: 8, date: "10/04/2026", rapport: "docs/Rapports/10-17-04.pdf", ressources: "docs/Rapports/controle3v1.pdf" },
+        { num: 9, date: "17/04/2026", rapport: "docs/Rapports/10-17-04.pdf", ressources: "docs/Rapports/structure de controle.pdf" },
+        { num: 10, date: "15/05/2026", rapport: "docs/Rapports/15-05.pdf", ressources: "docs/Rapports/syntaxeStrucuresConditionnels.pdf" },
+        { num: 11, date: "22/05/2026", rapport: "docs/Rapports/2205.pdf", ressources: "docs/Rapports/fiche et grille_merged.pdf" }
     ];
 
     const tableBody = document.getElementById('seances-table-body');
@@ -145,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <td data-label="Séance" class="seance-num">Séance ${s.num}</td>
                 <td data-label="Date" class="seance-date">${s.date}</td>
                 <td data-label="Rapport"><a href="${s.rapport}" class="seance-link" target="_blank"><i class="fas fa-file-alt"></i> Voir le rapport</a></td>
-                <td data-label="Fiche pédagogique"><a href="${s.fiche}" class="seance-link" target="_blank"><i class="fas fa-chalkboard"></i> Voir la fiche</a></td>
+                <td data-label="Ressources et réalisations"><a href="${s.ressources}" class="seance-link" target="_blank"><i class="fas fa-folder-open"></i> Voir les ressources</a></td>
             `;
             tableBody.appendChild(row);
         });

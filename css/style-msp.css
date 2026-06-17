@@ -1223,3 +1223,50 @@ body.dark-mode .auto-eval-carousel-btn:hover {
 body.dark-mode .auto-eval-carousel-btn:hover i {
     color: white;
 }
+/* ========= LIEN PLUS DE DÉTAILS ========= */
+.msp-more-details {
+    margin-top: 1.2rem;
+}
+
+.btn-more-details {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, #f0eaff, #e9d5ff);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #6d3bc7;
+    transition: all 0.3s;
+    border: 1px solid #d9c8ff;
+}
+
+.btn-more-details i {
+    font-size: 0.9rem;
+    color: #e74c3c;
+}
+
+.btn-more-details:hover {
+    background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(139, 92, 246, 0.2);
+}
+
+.btn-more-details:hover i {
+    color: white;
+}
+
+/* Theme sombre */
+body.dark-mode .btn-more-details {
+    background: #1e1e2e;
+    border-color: #3a3a4e;
+    color: #b47cff;
+}
+
+body.dark-mode .btn-more-details:hover {
+    background: linear-gradient(135deg, #8b5cf6, #6d3bc7);
+    color: white;
+}
