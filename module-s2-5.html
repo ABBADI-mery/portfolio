@@ -7,6 +7,60 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style-common.css">
     <link rel="stylesheet" href="css/style-module.css">
+    <style>
+        .couche-item {
+            padding: 1rem 1.2rem;
+            margin-bottom: 0.8rem;
+            border-radius: 6px;
+            border-left: 4px solid #2c3e50;
+            background: #f8f9fa;
+        }
+        .couche-item.dark {
+            background: #2a2a3a;
+        }
+        .couche-item h4 {
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 0.3rem;
+        }
+        .couche-item p {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin: 0.2rem 0;
+        }
+        .couche-item ul {
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.8;
+            margin: 0.3rem 0;
+        }
+        .couche-item ul li strong {
+            color: #2d3748;
+        }
+        .travaux-pratiques {
+            padding: 1rem 1.2rem;
+            border-radius: 6px;
+            background: #f8f9fa;
+            border-left: 4px solid #2c3e50;
+            margin-top: 0.8rem;
+        }
+        .travaux-pratiques.dark {
+            background: #2a2a3a;
+        }
+        .travaux-pratiques h4 {
+            font-size: 1rem;
+            color: #2d3748;
+            margin-bottom: 0.3rem;
+        }
+        .travaux-pratiques ul {
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 2;
+            margin: 0.3rem 0;
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -74,55 +128,64 @@
                         <h2>Compétences visées</h2>
                         <p>Savoir exploiter les fonctionnalités d'un réseau local (Ethernet et Wifi) ainsi que celles d'Internet pour permettre aux utilisateurs de partager des ressources, de communiquer et de collaborer de manière efficace.</p>
 
-                        <!-- Activités pratiques -->
+                        <!-- ============================================================ -->
+                        <!-- Activité pratique : Couches OSI (Physique, Liaison, Internet)  -->
+                        <!-- ============================================================ -->
                         <div class="activity-section">
-                            <h2><i class="fas fa-tasks"></i> Activités pratiques</h2>
+                            <h2><i class="fas fa-tasks"></i> Activité pratique</h2>
                             
-                            <div class="activity-card">
+                            <div class="activity-card" style="border-left: 4px solid #2c3e50;">
                                 <div class="activity-header">
                                     <span class="activity-num">01</span>
-                                    <h3>Simulation réseau avec Cisco Packet Tracer</h3>
+                                    <h3>Étude des couches Physique, Liaison et Internet du modèle OSI</h3>
                                 </div>
-                                <p>Création et simulation d'un réseau local simple avec des ordinateurs, commutateurs et routeurs.</p>
-                                <a href="docs/reseau/simulation-packet-tracer.pkt" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la simulation</a>
-                                <a href="docs/reseau/rapport-simulation.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir le rapport</a>
-                            </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">02</span>
-                                    <h3>Configuration d'adressage IP</h3>
+                                
+                                <p><strong>Objectif :</strong> Comprendre le fonctionnement des trois premières couches du modèle OSI à travers des manipulations pratiques et des simulations réseau.</p>
+
+                                <!-- Couche Physique -->
+                                <div class="couche-item">
+                                    <h4>Couche Physique (Physical Layer)</h4>
+                                    <ul>
+                                        <li><strong>Rôle :</strong> Transmission des bits sur le support physique (câble, fibre, hertzien)</li>
+                                        <li><strong>Caractéristiques :</strong> Débit, synchronisation, codage des signaux</li>
+                                        <li><strong>Matériels :</strong> Câbles (UTP, fibre), cartes réseau, concentrateurs (Hubs), répéteurs</li>
+                                    </ul>
                                 </div>
-                                <p>Exercices pratiques sur le calcul et la configuration des adresses IP, masques de sous-réseau et passerelles par défaut.</p>
-                                <a href="docs/reseau/exercices-adressage-ip.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir les exercices</a>
-                                <a href="docs/reseau/correction-adressage-ip.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la correction</a>
-                            </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">03</span>
-                                    <h3>Analyse des protocoles réseau</h3>
+
+                                <!-- Couche Liaison -->
+                                <div class="couche-item">
+                                    <h4>Couche Liaison (Data Link Layer)</h4>
+                                    <ul>
+                                        <li><strong>Rôle :</strong> Découpage des données en trames, contrôle d'erreurs, adressage MAC</li>
+                                        <li><strong>Protocoles :</strong> Ethernet, PPP, HDLC</li>
+                                        <li><strong>Matériels :</strong> Commutateurs (Switches), ponts (Bridges)</li>
+                                    </ul>
                                 </div>
-                                <p>Utilisation de Wireshark pour capturer et analyser les trames réseau (HTTP, DNS, TCP).</p>
-                                <a href="docs/reseau/analyse-protocoles.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir l'analyse</a>
-                            </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">04</span>
-                                    <h3>Présentation sur les modèles OSI et TCP-IP</h3>
+
+                                <!-- Couche Internet / Réseau -->
+                                <div class="couche-item">
+                                    <h4>Couche Internet / Réseau (Network Layer)</h4>
+                                    <ul>
+                                        <li><strong>Rôle :</strong> Adressage logique (IP), routage des paquets entre réseaux</li>
+                                        <li><strong>Protocoles :</strong> IP (IPv4 / IPv6), ICMP, ARP</li>
+                                        <li><strong>Matériels :</strong> Routeurs, passerelles</li>
+                                    </ul>
                                 </div>
-                                <p>Présentation comparative des modèles OSI et TCP-IP avec illustration des protocoles de chaque couche.</p>
-                                <a href="docs/reseau/modeles-osi-tcpip.pptx" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la présentation</a>
+
+                               
+
                             </div>
                         </div>
+                        <!-- ============================================================ -->
+                        <!-- Fin activité pratique                                        -->
+                        <!-- ============================================================ -->
+
                     </div>
 
                     <div class="module-ressources">
                         <h3><i class="fas fa-download"></i> Ressources</h3>
                         <div class="ressources-list">
                             <a href="docs/modules/c5s2.pdf" class="ressource-item"><i class="fas fa-file-pdf"></i> Support de cours PDF</a>
-                            <a href="#" class="ressource-item"><i class="fas fa-tasks"></i> Travaux pratiques</a>
                             <a href="docs/modules/r5s2.pdf" class="ressource-item"><i class="fas fa-file-alt"></i> Rapport</a>
                         </div>
                     </div>
@@ -137,9 +200,9 @@
         </section>
     </main>
 
-    <footer class="footer">
+     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-info"><p><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
+            <div class="footer-info"><p><i class="fas fa-envelope"></i>  mrymbadi525@gmail.com<</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
             <div class="footer-copy"><p>© 2025 Meryam Abbadi – Portfolio enseignant informatique</p></div>
         </div>
     </footer>

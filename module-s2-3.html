@@ -7,6 +7,188 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style-common.css">
     <link rel="stylesheet" href="css/style-module.css">
+    <style>
+        .projet-principal {
+            border-left: 4px solid #2c3e50;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+            margin-top: 1.5rem;
+        }
+        .projet-principal.dark {
+            background: #1e1e2e;
+        }
+        .projet-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+        .projet-header .badge-projet {
+            background: #2c3e50;
+            color: #fff;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.2rem 1rem;
+            border-radius: 20px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .projet-header h3 {
+            font-size: 1.3rem;
+            color: #2d3748;
+            margin: 0;
+        }
+        .projet-description {
+            color: #4a5568;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .projet-description strong {
+            color: #2d3748;
+        }
+        .fonctionnalites-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .fonctionnalites-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .fonctionnalite-item {
+            padding: 1.2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .fonctionnalite-item.dark {
+            background: #2a2a3a;
+        }
+        .fonctionnalite-item .numero {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #6c63ff;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+        .fonctionnalite-item h4 {
+            font-size: 0.95rem;
+            color: #2d3748;
+            margin: 0.3rem 0;
+        }
+        .fonctionnalite-item p {
+            font-size: 0.85rem;
+            color: #4a5568;
+            margin: 0;
+        }
+        .niveaux-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        @media (max-width: 768px) {
+            .niveaux-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .niveau-card {
+            padding: 1rem 1.2rem;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+        .niveau-card.facile {
+            background: #f0fff4;
+            border-color: #48bb78;
+        }
+        .niveau-card.moyen {
+            background: #fffbeb;
+            border-color: #ed8936;
+        }
+        .niveau-card.difficile {
+            background: #fff5f5;
+            border-color: #fc8181;
+        }
+        .niveau-card.dark.facile {
+            background: #1a2e1a;
+        }
+        .niveau-card.dark.moyen {
+            background: #2e2a1a;
+        }
+        .niveau-card.dark.difficile {
+            background: #2e1a1a;
+        }
+        .niveau-card .niveau-label {
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+        .niveau-card .niveau-label.facile { color: #48bb78; }
+        .niveau-card .niveau-label.moyen { color: #ed8936; }
+        .niveau-card .niveau-label.difficile { color: #fc8181; }
+        .niveau-card p {
+            font-size: 0.85rem;
+            color: #4a5568;
+            margin: 0;
+        }
+        .fonctionnement {
+            margin: 1.5rem 0;
+            padding: 1.2rem 1.5rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .fonctionnement.dark {
+            background: #2a2a3a;
+        }
+        .fonctionnement ol {
+            padding-left: 1.2rem;
+            line-height: 2;
+            color: #4a5568;
+            font-size: 0.95rem;
+        }
+        .fonctionnement ol li strong {
+            color: #2d3748;
+        }
+        .projet-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        .btn-projet {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.6rem 1.5rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .btn-projet.primary {
+            background: #2c3e50;
+            color: #fff;
+        }
+        .btn-projet.primary:hover {
+            background: #1a252f;
+        }
+        .btn-projet.outline {
+            border: 2px solid #2c3e50;
+            color: #2c3e50;
+        }
+        .btn-projet.outline:hover {
+            background: #2c3e50;
+            color: #fff;
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -69,63 +251,87 @@
                         <h2>Compétences visées</h2>
                         <p>Au terme de cet atelier, le stagiaire est en mesure de concevoir, développer et produire des ressources didactiques relatives à l'enseignement-apprentissage de la discipline, en mobilisant ses savoirs, ses observations et expériences aux stages pratiques ainsi que les différentes démarches et outils disponibles, y compris des ressources numériques en vue de contribuer au développement de l'innovation pédagogique favorisant les apprentissages chez les élèves.</p>
 
-                        <!-- Projets Production didactique -->
-                        <div class="activity-section">
-                            <h2><i class="fas fa-project-diagram"></i> Projets - Production didactique</h2>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">01</span>
-                                    <h3>Création d'une séquence pédagogique complète</h3>
-                                </div>
-                                <p>Conception d'une séquence pédagogique pour l'enseignement de l'informatique au niveau Tronc commun, incluant objectifs, activités, évaluations et remédiations.</p>
-                                <a href="docs/production/sequence-pedagogique.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la séquence pédagogique</a>
+                        <!-- ============================================================ -->
+                        <!-- PROJET PRINCIPAL                                             -->
+                        <!-- ============================================================ -->
+                        <div class="projet-principal">
+                            <div class="projet-header">
+                                <span class="badge-projet">Projet</span>
+                                <h3>Plateforme d'apprentissage adaptative pour le tronc commun</h3>
                             </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">02</span>
-                                    <h3>Élaboration de fiches pédagogiques</h3>
+
+                            <p class="projet-description">
+                                <strong>Objectif :</strong> Concevoir un site web éducatif permettant aux apprenants du tronc commun de consolider leurs acquis en informatique. La plateforme propose des cours interactifs et génère automatiquement des évaluations adaptées au niveau de chaque élève.
+                            </p>
+
+                            <!-- Fonctionnalités -->
+                            <div class="fonctionnalites-grid">
+                                <div class="fonctionnalite-item">
+                                    <span class="numero">01</span>
+                                    <h4>Cours interactifs</h4>
+                                    <p>Accès aux leçons du programme avec contenus enrichis</p>
                                 </div>
-                                <p>Création de fiches pédagogiques structurées pour différentes séances d'enseignement de l'informatique.</p>
-                                <a href="docs/production/fiches-pedagogiques.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir les fiches pédagogiques</a>
+                                <div class="fonctionnalite-item">
+                                    <span class="numero">02</span>
+                                    <h4>Évaluation adaptative</h4>
+                                    <p>Génération automatique de tests selon le niveau de l'élève</p>
+                                </div>
+                                <div class="fonctionnalite-item">
+                                    <span class="numero">03</span>
+                                    <h4>Suivi de progression</h4>
+                                    <p>Tableau de bord personnalisé pour visualiser les progrès</p>
+                                </div>
                             </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">03</span>
-                                    <h3>Création d'exercices et d'évaluations</h3>
+
+                            <!-- Niveaux de difficulté -->
+                            <h4 style="color: #2d3748; margin: 1.5rem 0 0.8rem 0;">Niveaux d'évaluation</h4>
+                            <div class="niveaux-container">
+                                <div class="niveau-card facile">
+                                    <span class="niveau-label facile">● Facile</span>
+                                    <p>Questions basiques pour valider les notions essentielles</p>
                                 </div>
-                                <p>Conception d'exercices progressifs et d'évaluations formatives et sommatives adaptées aux niveaux des élèves.</p>
-                                <a href="docs/production/exercices-evaluations.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir les exercices et évaluations</a>
+                                <div class="niveau-card moyen">
+                                    <span class="niveau-label moyen">● Moyen</span>
+                                    <p>Exercices d'application et de compréhension</p>
+                                </div>
+                                <div class="niveau-card difficile">
+                                    <span class="niveau-label difficile">● Difficile</span>
+                                    <p>Problèmes complexes et situations d'intégration</p>
+                                </div>
                             </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">04</span>
-                                    <h3>Production de supports numériques interactifs</h3>
-                                </div>
-                                <p>Création de ressources numériques interactives (quiz, exercices en ligne, présentations animées) pour dynamiser l'apprentissage.</p>
-                                <a href="docs/production/supports-numeriques.pptx" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir les supports numériques</a>
+
+                            <!-- Fonctionnement -->
+                            <div class="fonctionnement">
+                                <h4 style="color: #2d3748; margin-bottom: 0.8rem;">Fonctionnement de l'évaluation adaptative</h4>
+                                <ol>
+                                    <li><strong>Test de positionnement :</strong> L'élève commence par évaluer son niveau initial</li>
+                                    <li><strong>Analyse des réponses :</strong> Le système identifie les notions maîtrisées et les lacunes</li>
+                                    <li><strong>Adaptation :</strong> Les questions suivantes s'ajustent automatiquement au niveau de l'élève</li>
+                                    <li><strong>Rapport détaillé :</strong> Un bilan est généré avec les points forts et axes d'amélioration</li>
+                                    <li><strong>Remédiation :</strong> Des exercices ciblés sont proposés pour consolider les acquis</li>
+                                </ol>
                             </div>
-                            
-                            <div class="activity-card">
-                                <div class="activity-header">
-                                    <span class="activity-num">05</span>
-                                    <h3>Analyse et évaluation de ressources existantes</h3>
-                                </div>
-                                <p>Analyse critique de ressources pédagogiques existantes et proposition d'améliorations.</p>
-                                <a href="docs/production/analyse-ressources.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir l'analyse des ressources</a>
+
+                            <!-- Liens -->
+                            <div class="projet-links">
+                                <a href="#" class="btn-projet primary"><i class="fas fa-globe"></i> Voir le site (en développement)</a>
+                                <a href="docs/production/cahier-charges.pdf" class="btn-projet outline"><i class="fas fa-file-pdf"></i> Cahier des charges</a>
+                                <a href="docs/production/maquettes-site.pdf" class="btn-projet outline"><i class="fas fa-paint-brush"></i> Maquettes</a>
                             </div>
                         </div>
+                        <!-- ============================================================ -->
+                        <!-- FIN PROJET PRINCIPAL                                        -->
+                        <!-- ============================================================ -->
+
                     </div>
 
                     <div class="module-ressources">
                         <h3><i class="fas fa-download"></i> Ressources</h3>
                         <div class="ressources-list">
-                            <a href="docs/modules/c3s2.pdf" class="ressource-item"><i class="fas fa-file-pdf"></i> Support de cours PDF</a>
-                            <a href="#" class="ressource-item"><i class="fas fa-tasks"></i> Travaux pratiques</a>
+                           
                             <a href="docs/modules/r3s2.pdf" class="ressource-item"><i class="fas fa-file-alt"></i> Rapport</a>
+                           
+                            <a href="docs/production/maquettes-site.pdf" class="ressource-item"><i class="fas fa-paint-brush"></i> Maquettes du site</a>
                         </div>
                     </div>
                 </div>
@@ -139,9 +345,9 @@
         </section>
     </main>
 
-    <footer class="footer">
+     <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-info"><p><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
+            <div class="footer-info"><p><i class="fas fa-envelope"></i>  mrymbadi525@gmail.com<</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
             <div class="footer-copy"><p>© 2025 Meryam Abbadi – Portfolio enseignant informatique</p></div>
         </div>
     </footer>

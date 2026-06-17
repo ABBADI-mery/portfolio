@@ -7,6 +7,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style-common.css">
     <link rel="stylesheet" href="css/style-module.css">
+    <style>
+        .reflexion-item {
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.6rem;
+            border-radius: 6px;
+            border-left: 4px solid #2c3e50;
+            background: #f8f9fa;
+        }
+        .reflexion-item.dark {
+            background: #2a2a3a;
+        }
+        .reflexion-item h4 {
+            font-size: 0.95rem;
+            color: #2d3748;
+            margin-bottom: 0.2rem;
+        }
+        .reflexion-item p {
+            font-size: 0.9rem;
+            color: #4a5568;
+            margin: 0;
+            line-height: 1.6;
+        }
+        .reflexion-item ul {
+            padding-left: 1.2rem;
+            font-size: 0.9rem;
+            color: #4a5568;
+            line-height: 1.8;
+            margin: 0.3rem 0;
+        }
+        .reflexion-item .amelioration {
+            margin-top: 0.5rem;
+            padding: 0.5rem 0.8rem;
+            background: #ebf8ff;
+            border-radius: 4px;
+            border-left: 3px solid #3182ce;
+            font-size: 0.9rem;
+        }
+        .reflexion-item .amelioration.dark {
+            background: #1a2a3a;
+        }
+        .reflexion-item .amelioration strong {
+            color: #2b6cb0;
+        }
+    </style>
 </head>
 <body>
     <header class="navbar">
@@ -100,7 +144,7 @@
                                         <div>
                                             <strong>Cours : Les fonctionnalités d'un tableur</strong>
                                             <span>Présentation complète des fonctions essentielles (formules, graphiques, tris, filtres)</span>
-                                            <a href="docs/analyse-pratiques/cours-tableur.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir le cours</a>
+                                            <a href="docs/modules/Introduction et fonctionnalités d'un tableur.pdf" class="btn-view" target="_blank">Voir le cours</a>
                                         </div>
                                     </div>
                                     
@@ -109,48 +153,69 @@
                                         <div>
                                             <strong>Fiche pédagogique</strong>
                                             <span>Structure de la séance : objectifs, déroulement, évaluation</span>
-                                            <a href="docs/analyse-pratiques/fiche-pedagogique-tableur.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir la fiche pédagogique</a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="sub-activity">
-                                        <i class="fas fa-tasks"></i>
-                                        <div>
-                                            <strong>Exercices pratiques</strong>
-                                            <span>Série d'exercices progressifs sur le tableur</span>
-                                            <a href="docs/analyse-pratiques/exercices-tableur.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir les exercices</a>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="sub-activity">
-                                        <i class="fas fa-file-excel"></i>
-                                        <div>
-                                            <strong>Fichier tableur exemple</strong>
-                                            <span>Fichier Excel avec données et formules à compléter</span>
-                                            <a href="docs/analyse-pratiques/exemple-tableur.xlsx" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Télécharger le fichier</a>
+                                            <a href="docs/modules/fiche excel.pdf" class="btn-view" target="_blank">Voir la fiche pédagogique</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             
+                            <!-- ============================================================ -->
+                            <!-- Activité 02 : Analyse réflexive de la séance                    -->
+                            <!-- ============================================================ -->
                             <div class="activity-card">
                                 <div class="activity-header">
                                     <span class="activity-num">02</span>
                                     <h3>Analyse réflexive de la séance</h3>
                                 </div>
                                 <p>Retour d'expérience et analyse réflexive sur l'animation du cours, identification des points forts et axes d'amélioration.</p>
-                                <a href="docs/analyse-pratiques/analyse-reflexive.pdf" class="btn-view" target="_blank"><i class="fas fa-eye"></i> Voir l'analyse réflexive</a>
+
+                                <!-- Point 1 : Tonalité de voix -->
+                                <div class="reflexion-item">
+                                    <h4><i class="fas fa-volume-up"></i> Tonalité de voix</h4>
+                                    <p>Lors de l'animation de la séance, j'ai utilisé une tonalité de voix adaptée pour maintenir l'attention des apprenants. J'ai varié le débit et l'intonation pour souligner les points importants et garder un rythme dynamique.</p>
+                                    <div class="amelioration">
+                                        <strong><i class="fas fa-arrow-right"></i> Axe d'amélioration :</strong> Travailler davantage sur la modulation de la voix pour capter l'attention des élèves en difficulté et créer un climat plus engageant.
+                                    </div>
+                                </div>
+
+                                <!-- Point 2 : Déplacement dans la classe -->
+                                <div class="reflexion-item">
+                                    <h4><i class="fas fa-people-arrows"></i> Déplacement dans la classe</h4>
+                                    <p>J'ai circulé dans la classe pour observer le travail des élèves, répondre à leurs questions et m'assurer de leur compréhension. Ce déplacement m'a permis d'avoir une vision globale de la classe et d'identifier rapidement les blocages.</p>
+                                    <div class="amelioration">
+                                        <strong><i class="fas fa-arrow-right"></i> Axe d'amélioration :</strong> Planifier davantage de passages systématiques dans les zones reculées de la classe pour inclure tous les élèves, y compris ceux qui sont discrets.
+                                    </div>
+                                </div>
+
+                                <!-- Point 3 : Participation avec les élèves en arrière -->
+                                <div class="reflexion-item">
+                                    <h4><i class="fas fa-handshake"></i> Participation avec les élèves en arrière</h4>
+                                    <p>J'ai accordé une attention particulière aux élèves placés au fond de la classe en les sollicitant directement par des questions et en m'approchant de leur espace de travail. Cette approche a permis de les impliquer davantage et de renforcer leur sentiment d'appartenance au groupe.</p>
+                                    <div class="amelioration">
+                                        <strong><i class="fas fa-arrow-right"></i> Axe d'amélioration :</strong> Mettre en place des stratégies de remobilisation pour les élèves les plus éloignés (passage régulier, activités collaboratives, responsabilisation).
+                                    </div>
+                                </div>
+
+                                <!-- Synthèse -->
+                                <div style="margin-top: 1rem; padding: 1rem; background: #f0f4ff; border-radius: 6px; border-left: 4px solid #2c3e50;">
+                                    <h4 style="color: #2d3748;"><i class="fas fa-lightbulb"></i> Synthèse réflexive</h4>
+                                    <p style="font-size: 0.95rem; color: #4a5568; line-height: 1.7;">
+                                        Cette séance d'animation m'a permis de prendre conscience de l'importance de la <strong>gestion de la voix</strong>, des <strong>déplacements dans la classe</strong> et de l'<strong>attention portée à tous les élèves</strong>, en particulier ceux qui sont en retrait. L'analyse réflexive de ma pratique m'a aidée à identifier mes points forts et à définir des axes de progrès concrets pour mes futures interventions pédagogiques.
+                                    </p>
+                                </div>
+
                             </div>
+                            <!-- ============================================================ -->
+                            <!-- Fin analyse réflexive                                        -->
+                            <!-- ============================================================ -->
+
                         </div>
                     </div>
 
                     <div class="module-ressources">
                         <h3><i class="fas fa-download"></i> Ressources</h3>
                         <div class="ressources-list">
-                            <a href="docs/modules/c7s2.pdf" class="ressource-item"><i class="fas fa-file-pdf"></i> Support de cours PDF</a>
-                            <a href="#" class="ressource-item"><i class="fas fa-tasks"></i> Travaux pratiques</a>
                             <a href="docs/modules/r7s2.pdf" class="ressource-item"><i class="fas fa-file-alt"></i> Rapport</a>
-                            <a href="docs/analyse-pratiques/cours-tableur.pdf" class="ressource-item"><i class="fas fa-file-pdf"></i> Cours tableur</a>
                         </div>
                     </div>
                 </div>
@@ -163,10 +228,9 @@
             </div>
         </section>
     </main>
-
-    <footer class="footer">
+ <footer class="footer">
         <div class="container footer-content">
-            <div class="footer-info"><p><i class="fas fa-envelope"></i> meryam.abbadi@educmaroc.ma</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
+            <div class="footer-info"><p><i class="fas fa-envelope"></i>  mrymbadi525@gmail.com<</p><p><i class="fab fa-linkedin"></i> linkedin.com/in/meryam-abbadi</p><p><i class="fas fa-phone-alt"></i> +212 6 12 34 56 78</p></div>
             <div class="footer-copy"><p>© 2025 Meryam Abbadi – Portfolio enseignant informatique</p></div>
         </div>
     </footer>
